@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Leadership Course Assignments</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600&display=swap">
+
+<style>
+  :root {
+    --paper:      #f1f4f2;
+    --surface:    #ffffff;
+    --surface-2:  #e9efec;
+    --rule:       #d2dcd7;
+    --rule-soft:  #e2e9e5;
+    --ink:        #15211e;
+    --ink-2:      #3d4f49;
+    --muted:      #6b7d77;
+    --accent:     #14524b;
+    --accent-2:   #1c6f66;
+    --accent-ink: #ffffff;
+    --shadow:     0 1px 2px rgba(21,33,30,.06), 0 8px 24px -14px rgba(21,33,30,.28);
+    --focus:      #1c6f66;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:      #0f1614;
+      --surface:    #172220;
+      --surface-2:  #1e2b28;
+      --rule:       #2c3b37;
+      --rule-soft:  #24322e;
+      --ink:        #e8efeb;
+      --ink-2:      #bfcdc8;
+      --muted:      #8ba098;
+      --accent:     #5fb3a5;
+      --accent-2:   #7ac8ba;
+      --accent-ink: #0c1917;
+      --shadow:     0 1px 2px rgba(0,0,0,.4), 0 10px 28px -16px rgba(0,0,0,.8);
+      --focus:      #7ac8ba;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:      #0f1614;
+    --surface:    #172220;
+    --surface-2:  #1e2b28;
+    --rule:       #2c3b37;
+    --rule-soft:  #24322e;
+    --ink:        #e8efeb;
+    --ink-2:      #bfcdc8;
+    --muted:      #8ba098;
+    --accent:     #5fb3a5;
+    --accent-2:   #7ac8ba;
+    --accent-ink: #0c1917;
+    --shadow:     0 1px 2px rgba(0,0,0,.4), 0 10px 28px -16px rgba(0,0,0,.8);
+    --focus:      #7ac8ba;
+  }
+
+  * { box-sizing: border-box; }
+  html { color-scheme: light dark; }
+
+  body {
+    margin: 0;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; }
+
+  .wrap {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding-inline: 20px;
+    padding-block: 0 4rem;
+  }
+
+  h1, h2, h3 {
+    font-family: Newsreader, Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    text-wrap: balance;
+    margin: 0;
+    line-height: 1.15;
+  }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .72rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  header.masthead {
+    padding-block: 3.5rem 2rem;
+    border-bottom: 2px solid var(--ink);
+  }
+  header.masthead h1 {
+    font-size: clamp(2.1rem, 6vw, 3rem);
+    letter-spacing: -.015em;
+    margin-block: .5rem .7rem;
+  }
+  header.masthead p {
+    font-family: Newsreader, Georgia, serif;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: var(--ink-2);
+    max-width: 44ch;
+    margin: 0;
+  }
+
+  .section-label {
+    display: flex;
+    align-items: baseline;
+    gap: .9rem;
+    margin-block: 2.5rem 1rem;
+  }
+  .section-label .eyebrow { flex: none; }
+  .section-label .line { flex: 1; height: 1px; background: var(--rule); }
+
+  .card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 1.4rem 1.5rem;
+    margin-bottom: .8rem;
+    box-shadow: var(--shadow);
+    transition: border-color .15s ease, transform .15s ease;
+  }
+  .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .card:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) { .card { transition: none; } .card:hover { transform: none; } }
+
+  .card-top {
+    display: flex;
+    align-items: baseline;
+    gap: .9rem;
+    flex-wrap: wrap;
+    margin-bottom: .5rem;
+  }
+  .card-n {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .75rem;
+    font-weight: 500;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .card h2 { font-size: 1.45rem; letter-spacing: -.01em; }
+  .card p.desc {
+    margin: 0 0 1rem;
+    font-size: .95rem;
+    color: var(--ink-2);
+    max-width: 54ch;
+  }
+  .card .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem 1.4rem;
+    font-size: .8rem;
+    color: var(--muted);
+    padding-top: .9rem;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .card .facts span { display: flex; align-items: baseline; gap: .4rem; }
+  .card .facts b {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    color: var(--ink-2);
+    font-variant-numeric: tabular-nums;
+  }
+  .card .go {
+    margin-top: .9rem;
+    font-size: .88rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .card .go::after { content: " \2192"; }
+
+  .upcoming {
+    border: 1px dashed var(--rule);
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    color: var(--muted);
+    font-size: .9rem;
+    background: transparent;
+  }
+
+  .note {
+    margin-top: 2.5rem;
+    padding: 1rem 1.1rem;
+    background: var(--surface-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    font-size: .88rem;
+    color: var(--ink-2);
+  }
+  .note strong { color: var(--ink); }
+
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.3rem;
+    border-top: 1px solid var(--rule);
+    font-size: .8rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  footer p { margin: 0 0 .4rem; max-width: 60ch; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Undergraduate Leadership</p>
+    <h1>Course Assignments</h1>
+    <p>Self-assessments and exercises for the semester. Each one runs in your browser and produces something you turn in on Canvas.</p>
+  </header>
+
+  <div class="section-label">
+    <p class="eyebrow">Available now</p>
+    <span class="line"></span>
+  </div>
+
+  <a class="card" href="cultural-awareness/">
+    <div class="card-top">
+      <span class="card-n">01</span>
+      <h2>Cultural Awareness Inventory</h2>
+    </div>
+    <p class="desc">Thirty-two statements about how you notice bias, respond to it, and build relationships across difference. Scores itself and gives you a profile, then walks you through three reflection questions.</p>
+    <div class="facts">
+      <span>Items <b>32</b></span>
+      <span>Scale <b>1&ndash;5</b></span>
+      <span>Time <b>~10 min</b></span>
+      <span>Submit <b>Text entry</b></span>
+    </div>
+    <p class="go">Start the inventory</p>
+  </a>
+
+  <div class="section-label">
+    <p class="eyebrow">Later this semester</p>
+    <span class="line"></span>
+  </div>
+
+  <div class="upcoming">More assignments will appear here as the semester goes on. Bookmark this page rather than the individual links.</div>
+
+  <div class="note">
+    <strong>Your answers stay on your device.</strong> These assessments send nothing anywhere. Nothing is scored remotely, and your instructor never sees how you answered any individual item &mdash; only what you choose to paste into Canvas.
+  </div>
+
+  <footer>
+    <p>Complete each assessment individually and honestly. The point is an accurate starting picture, not a good-looking score.</p>
+    <p>Trouble opening an assignment, or something looks broken? Email your instructor rather than guessing at an answer.</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
