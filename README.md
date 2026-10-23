@@ -9,7 +9,7 @@ GitHub Pages.
 
 | Assignment | Folder | URL |
 |---|---|---|
-| Cultural Awareness Inventory | `cultural-awareness/` | https://briancholtz.github.io/course-assignments/cultural-awareness/ |
+| Cultural Diversity Awareness Questionnaire | `cultural-awareness/` | https://briancholtz.github.io/course-assignments/cultural-awareness/ |
 
 The root `index.html` is the hub page students bookmark. Each assignment lives in
 its own folder as `index.html`, so its URL stays short and stable.
@@ -38,23 +38,36 @@ reach the instructor only through whatever the student pastes into Canvas.
 3. Add a card to the root `index.html`
 4. Commit and push to `main` — Pages redeploys automatically
 
-## Cultural Awareness Inventory
+## Cultural Diversity Awareness Questionnaire
 
 32 statements rated 1–5 (1 = never, 5 = always). The total is the **straight sum
 of all 32 responses**, range 32–160. There are no reverse-scored items and no
 subscales.
 
-| Range   | Profile      |
-|---------|--------------|
-| 130–160 | Rebel        |
-| 100–129 | Change Agent |
-| 70–99   | Neutral      |
-| 40–69   | Traditional  |
-| 32–39   | Unaware      |
+| Score   | Interpretation   |
+|---------|------------------|
+| 130–160 | Very high range  |
+| 100–129 | High range       |
+| 70–99   | Moderate range   |
+| 40–69   | Low range        |
+| 32–39   | Very low range   |
 
-Derived from a spreadsheet version whose scoring column was broken (its total
-resolved to `#REF!`) and whose reverse-scoring formulas contradicted the printed
-interpretation bands. The straight sum is what those bands describe.
+Confirmed against the published instrument, which directs the reader to "sum the
+numbers you circled." The range labels above are the published ones; the
+textbook assigns no personality profiles.
+
+The page shows the bottom band as 32-39 rather than the published 0-39, since 32
+items rated 1-5 cannot total below 32.
+
+Source: Questionnaire 9.3, "Cultural Diversity Awareness Questionnaire," from
+*Introduction to Leadership*, ch. 9, "Embracing Diversity and Inclusion",
+pp. 252-257. Adapted there from Special Populations and CTE Illinois Leadership
+Project. (2016). *Cultural Diversity Self-Assessment*.
+
+This page was first built from a spreadsheet copy whose scoring column was
+broken (its total resolved to `#REF!`), whose reverse-scoring formulas
+contradicted the printed interpretation, and whose wording had drifted from the
+published text in ten items. All three were corrected against the source.
 
 ### Degrading without JavaScript
 
