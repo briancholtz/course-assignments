@@ -1393,8 +1393,8 @@
       <h2>Reflection</h2>
       <p class="sub">Your profile is only the prompt. This question is the assignment &mdash; it is what you turn in.</p>
       <div class="prompt">
-        <label for="r1">Looking at your profile, which dimension is your strongest and which is your weakest? What would it take to raise the weakest one, and what might change for the people you lead if you did?</label>
-        <textarea id="r1" placeholder="Name the dimensions, point to specific statements, and be concrete about the situations where the difference would show."></textarea>
+        <label for="r1">Based on your scores on this assessment, what potential implications might your leadership style and behaviors have for how you motivate, influence, and work with others, and is there anything you might want to do differently as a result?</label>
+        <textarea id="r1" placeholder="Point to specific dimensions or statements, and be concrete about the situations where the difference would show."></textarea>
       </div>
     </section>
 
@@ -1446,8 +1446,9 @@ DIMENSION AVERAGES (total / number of items)
 RESPONSES 01-28: __ __ __ __ __ __ __ __ __ __ __ __ __ __
                  __ __ __ __ __ __ __ __ __ __ __ __ __ __
 
-REFLECTION - Strongest and weakest dimension, what it would take
-to raise the weakest, and what would change for the people I lead:
+REFLECTION - Implications of my leadership style and behaviors for how
+I motivate, influence and work with others, and what I might do
+differently as a result:
 </pre>
       </div>
     </section>
@@ -1486,9 +1487,9 @@ to raise the weakest, and what would change for the people I lead:
   var dateEl   = document.getElementById("studentDate");
   var noteEl   = document.getElementById("r1");
 
-  var PROMPT = "Looking at your profile, which dimension is your strongest and " +
-    "which is your weakest? What would it take to raise the weakest one, and what " +
-    "might change for the people you lead if you did?";
+  var PROMPT = "Based on your scores on this assessment, what potential implications " +
+    "might your leadership style and behaviors have for how you motivate, influence, and " +
+    "work with others, and is there anything you might want to do differently as a result?";
 
   var scaleName = {}, scaleItems = {};
   SCALES.forEach(function (s) { scaleName[s[0]] = s[1]; scaleItems[s[0]] = []; });
