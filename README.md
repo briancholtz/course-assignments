@@ -10,6 +10,7 @@ GitHub Pages.
 | Assignment | Folder | URL |
 |---|---|---|
 | Cultural Diversity Awareness Questionnaire | `cultural-awareness/` | https://briancholtz.github.io/course-assignments/cultural-awareness/ |
+| Transformational Leadership Inventory (adapted) | `transformational-leadership/` | https://briancholtz.github.io/course-assignments/transformational-leadership/ |
 
 The root `index.html` is the hub page students bookmark. Each assignment lives in
 its own folder as `index.html`, so its URL stays short and stable.
@@ -86,3 +87,39 @@ Each page is a single self-contained HTML file. No build step, no dependencies,
 no framework. Open it in any text editor.
 
 Submission instructions are marked with `EDIT ME` comments.
+
+## Transformational Leadership Inventory (adapted)
+
+28 items rated 1-7 (1 = strongly disagree, 7 = strongly agree). Scored as seven
+dimension averages, not a total. Items **3, 11 and 17 are reverse-scored** (a
+rating of v counts as 8 - v).
+
+| Dimension | Items | n |
+|---|---|---|
+| Articulating a Vision | 4, 12, 18, 20, 24 | 5 |
+| Providing an Appropriate Model | 5, 8, 26 | 3 |
+| Fostering Acceptance of Group Goals | 16, 22, 25, 28 | 4 |
+| High Performance Expectations | 1, 10, 14 | 3 |
+| Individualized Support | 3(R), 7, 9, 11(R) | 4 |
+| Intellectual Stimulation | 19, 21, 23, 27 | 4 |
+| Contingent Reward *(transactional)* | 2, 6, 13, 15, 17(R) | 5 |
+
+The first six dimensions are transformational; contingent reward is transactional.
+The source publishes no cutoff scores or norms, so the page asserts none - it shows
+the profile across dimensions and says to compare them to each other.
+
+**This is an adaptation.** The published instrument is worded for followers rating
+a leader ("Has a clear understanding of where we are going"). Items here are
+reworded to the first person for self-assessment, so the original validation
+evidence does not directly apply. The page states this in its footer. Two further
+wording changes: "employees" became "others", since students may not manage
+anyone, and item 27's published text is missing a word ("some of basic
+assumptions"), rendered here as "some of their basic assumptions".
+
+Source: Podsakoff, P. M., MacKenzie, S. B., Moorman, R. H., & Fetter, R. (1990).
+Transformational leader behaviors and their effects on followers' trust in leader,
+satisfaction, and organizational citizenship behaviors. *Leadership Quarterly,
+1*(2), 107-142. Items and factor structure from Table 3, pp. 118-119.
+
+Unlike the MLQ, the TLI has no commercial licensor and is used in the literature
+with citation.
