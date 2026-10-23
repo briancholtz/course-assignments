@@ -678,7 +678,7 @@
   }
   .prompt textarea {
     width: 100%;
-    min-height: 5.5rem;
+    min-height: 9rem;
     resize: vertical;
     font-family: "IBM Plex Sans", system-ui, sans-serif;
     font-size: .95rem;
@@ -819,7 +819,7 @@
         <path d="M8 1.5 3 3.5v4c0 3 2.1 5.6 5 7 2.9-1.4 5-4 5-7v-4L8 1.5Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
         <path d="m5.8 7.9 1.6 1.6 3-3.2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <span><strong>Your individual ratings stay on your device.</strong> This page sends nothing anywhere and your instructor never sees how you rated each statement. You submit only your total score and your three written reflections.</span>
+      <span><strong>Your individual ratings stay on your device.</strong> This page sends nothing anywhere and your instructor never sees how you rated each statement. You submit only your total score and your written reflection.</span>
     </div>
 
     <div class="idrow">
@@ -1334,26 +1334,18 @@
 
     <section class="reflect">
       <h2>Reflection</h2>
-      <p class="sub">Your score is only the prompt. These three questions are the assignment &mdash; they are what you turn in.</p>
+      <p class="sub">Your score is only the prompt. This question is the assignment &mdash; it is what you turn in.</p>
 
       <div class="prompt">
-        <label for="r1">1. Which single statement was the hardest to answer honestly, and what made it hard?</label>
-        <textarea id="r1" placeholder="Name the item number and write a few sentences."></textarea>
-      </div>
-      <div class="prompt">
-        <label for="r2">2. Find a statement you rated 1 or 2. What would have to change &mdash; in your habits, your circle, or your knowledge &mdash; to move it to a 4?</label>
-        <textarea id="r2" placeholder="Be concrete. What is the first step, and when would you take it?"></textarea>
-      </div>
-      <div class="prompt">
-        <label for="r3">3. Several items ask whether you <em>speak up</em> when you witness bias. Describe a time you did &mdash; or a time you didn&rsquo;t. What did it cost either way?</label>
-        <textarea id="r3" placeholder="Leadership shows up in what you do when it is awkward."></textarea>
+        <label for="r1">Based on your scores on this assessment, what potential implications might your level of cultural awareness have for how you work with and influence others as a leader, colleague, or team member?</label>
+        <textarea id="r1" placeholder="Point to your overall score or to specific statements, and be concrete about the situations where it would show."></textarea>
       </div>
     </section>
 
     <!-- ===== EDIT ME: submission instructions ===== -->
     <section class="submit-card">
       <h2>Turn this in</h2>
-      <p>Submit your total score, your profile, all 32 ratings, and your three written reflections.</p>
+      <p>Submit your total score, your profile, all 32 ratings, and your written reflection.</p>
 
       <p class="eyebrow" style="margin-bottom:.5rem">Your 32 responses</p>
       <pre class="resp" id="respBlock">01:<span class="ans a1"></span>  02:<span class="ans a2"></span>  03:<span class="ans a3"></span>  04:<span class="ans a4"></span>  05:<span class="ans a5"></span>  06:<span class="ans a6"></span>  07:<span class="ans a7"></span>  08:<span class="ans a8"></span>
@@ -1394,13 +1386,8 @@ Responses 09-16: __ __ __ __ __ __ __ __
 Responses 17-24: __ __ __ __ __ __ __ __
 Responses 25-32: __ __ __ __ __ __ __ __
 
-REFLECTION 1 - Hardest statement to answer honestly:
-
-
-REFLECTION 2 - A statement I rated 1 or 2, and how I'd move it to a 4:
-
-
-REFLECTION 3 - A time I spoke up, or didn't:
+REFLECTION - Implications of my level of cultural awareness for how
+I work with and influence others as a leader, colleague or team member:
 </pre>
       </div>
     </section>
@@ -1437,13 +1424,11 @@ REFLECTION 3 - A time I spoke up, or didn't:
     { lo: 130, hi: 160, name: "Rebel" }
   ];
 
-  var PROMPTS = [
-    "Which single statement was the hardest to answer honestly, and what made it hard?",
-    "Find a statement you rated 1 or 2. What would have to change to move it to a 4?",
-    "Describe a time you spoke up when you witnessed bias — or a time you didn’t. What did it cost either way?"
-  ];
+  var PROMPT = "Based on your scores on this assessment, what potential " +
+    "implications might your level of cultural awareness have for how you work " +
+    "with and influence others as a leader, colleague, or team member?";
 
-  var N = 32, MIN = 32, MAX = 160, KEY = "cai.v2";
+  var N = 32, MIN = 32, MAX = 160, KEY = "cai.v3";
 
   var form     = document.getElementById("survey");
   var results  = document.getElementById("results");
@@ -1455,7 +1440,7 @@ REFLECTION 3 - A time I spoke up, or didn't:
   var copyHint = document.getElementById("copyHint");
   var nameEl   = document.getElementById("studentName");
   var dateEl   = document.getElementById("studentDate");
-  var notesEls = ["r1", "r2", "r3"].map(function (id) { return document.getElementById(id); });
+  var notesEls = [document.getElementById("r1")];
 
   function readAll() {
     var vals = [];
@@ -1570,15 +1555,13 @@ REFLECTION 3 - A time I spoke up, or didn't:
       L.push(cells.join("  "));
     }
     L.push("");
-    L.push("REFLECTIONS");
+    L.push("REFLECTION");
     L.push("-------------------------------------------------");
-    for (var i = 0; i < 3; i++) {
-      L.push("");
-      L.push((i + 1) + ". " + wrap(PROMPTS[i], 72));
-      L.push("");
-      var a = notesEls[i].value.trim();
-      L.push(a ? wrap(a, 72) : "[not answered]");
-    }
+    L.push("");
+    L.push(wrap(PROMPT, 72));
+    L.push("");
+    var answer = notesEls[0].value.trim();
+    L.push(answer ? wrap(answer, 72) : "[not answered]");
     return L.join("\n");
   }
 
@@ -1674,7 +1657,7 @@ REFLECTION 3 - A time I spoke up, or didn't:
   document.getElementById("printBtn").addEventListener("click", function () { window.print(); });
 
   document.getElementById("resetBtn").addEventListener("click", function () {
-    if (!window.confirm("Clear all 32 answers and your reflection notes? This cannot be undone.")) return;
+    if (!window.confirm("Clear all 32 answers and your written reflection? This cannot be undone.")) return;
     form.reset();
     notesEls.forEach(function (el) { el.value = ""; });
     try { localStorage.removeItem(KEY); } catch (e) { /* storage blocked */ }
