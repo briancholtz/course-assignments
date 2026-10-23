@@ -11,6 +11,7 @@ GitHub Pages.
 |---|---|---|
 | Cultural Diversity Awareness Questionnaire | `cultural-awareness/` | https://briancholtz.github.io/course-assignments/cultural-awareness/ |
 | Transformational Leadership Inventory (adapted) | `transformational-leadership/` | https://briancholtz.github.io/course-assignments/transformational-leadership/ |
+| Ethical Leadership Style Questionnaire | `ethical-leadership/` | https://briancholtz.github.io/course-assignments/ethical-leadership/ |
 
 The root `index.html` is the hub page students bookmark. Each assignment lives in
 its own folder as `index.html`, so its URL stays short and stable.
@@ -123,3 +124,32 @@ satisfaction, and organizational citizenship behaviors. *Leadership Quarterly,
 
 Unlike the MLQ, the TLI has no commercial licensor and is used in the literature
 with citation.
+
+## Ethical Leadership Style Questionnaire
+
+Forced choice, not a rating scale. Ten situations, each with the same six
+responses; the score for a perspective is the number of times its letter was
+chosen, so the six scores always sum to 10.
+
+| Letter | Perspective |
+|---|---|
+| A | Duty Ethics |
+| B | Utilitarian Ethics |
+| C | Virtue Ethics |
+| D | Caring Ethics |
+| E | Egoism Ethics |
+| F | Justice Ethics |
+
+The highest count is the student's primary or dominant style, the second-highest
+next, and so on. Ties are common with only ten choices across six categories, and
+the page reports them as ties rather than picking a winner. There are no cutoff
+scores: the textbook states all perspectives have merit and there is no "best"
+one, so the page asserts no ranking beyond the student's own counts.
+
+**These are sample items** - the textbook prints an abridged version of a longer
+instrument and points to www.leaderdecisionmakingsurvey.com for the full
+questionnaire. The page says so in its footer.
+
+Source: Application 11.3, "Sample Items From the Ethical Leadership Style
+Questionnaire," from *Introduction to Leadership*, ch. 11, "Addressing Ethics in
+Leadership", pp. 313-318.

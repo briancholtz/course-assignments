@@ -1,0 +1,1294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ethical Leadership Style Questionnaire</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600&display=swap">
+
+<style>
+  :root {
+    --paper:      #f1f4f2;
+    --surface:    #ffffff;
+    --surface-2:  #e9efec;
+    --rule:       #d2dcd7;
+    --rule-soft:  #e2e9e5;
+    --ink:        #15211e;
+    --ink-2:      #3d4f49;
+    --muted:      #6b7d77;
+    --accent:     #14524b;
+    --accent-2:   #1c6f66;
+    --accent-ink: #ffffff;
+    --gold:       #9c7526;
+    --gold-soft:  #f3e7cb;
+    --grid:       #dde5e1;
+    --shadow:     0 1px 2px rgba(21,33,30,.06), 0 8px 24px -14px rgba(21,33,30,.28);
+    --focus:      #1c6f66;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:      #0f1614;
+      --surface:    #172220;
+      --surface-2:  #1e2b28;
+      --rule:       #2c3b37;
+      --rule-soft:  #24322e;
+      --ink:        #e8efeb;
+      --ink-2:      #bfcdc8;
+      --muted:      #8ba098;
+      --accent:     #5fb3a5;
+      --accent-2:   #7ac8ba;
+      --accent-ink: #0c1917;
+      --gold:       #d8ab5c;
+      --gold-soft:  #3a3018;
+      --grid:       #2a3a36;
+      --shadow:     0 1px 2px rgba(0,0,0,.4), 0 10px 28px -16px rgba(0,0,0,.8);
+      --focus:      #7ac8ba;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:      #0f1614;
+    --surface:    #172220;
+    --surface-2:  #1e2b28;
+    --rule:       #2c3b37;
+    --rule-soft:  #24322e;
+    --ink:        #e8efeb;
+    --ink-2:      #bfcdc8;
+    --muted:      #8ba098;
+    --accent:     #5fb3a5;
+    --accent-2:   #7ac8ba;
+    --accent-ink: #0c1917;
+    --gold:       #d8ab5c;
+    --gold-soft:  #3a3018;
+    --grid:       #2a3a36;
+    --shadow:     0 1px 2px rgba(0,0,0,.4), 0 10px 28px -16px rgba(0,0,0,.8);
+    --focus:      #7ac8ba;
+  }
+
+  * { box-sizing: border-box; }
+  html { color-scheme: light dark; }
+
+  /* Perspective counts computed in CSS, so they survive script stripping. */
+  body { counter-reset: c_duty 0 c_util 0 c_virtue 0 c_caring 0 c_egoism 0 c_justice 0 answered 0; }
+  #q1A:checked { counter-increment: c_duty 1 answered 1; }
+  #q1B:checked { counter-increment: c_util 1 answered 1; }
+  #q1C:checked { counter-increment: c_virtue 1 answered 1; }
+  #q1D:checked { counter-increment: c_caring 1 answered 1; }
+  #q1E:checked { counter-increment: c_egoism 1 answered 1; }
+  #q1F:checked { counter-increment: c_justice 1 answered 1; }
+  #q2A:checked { counter-increment: c_duty 1 answered 1; }
+  #q2B:checked { counter-increment: c_util 1 answered 1; }
+  #q2C:checked { counter-increment: c_virtue 1 answered 1; }
+  #q2D:checked { counter-increment: c_caring 1 answered 1; }
+  #q2E:checked { counter-increment: c_egoism 1 answered 1; }
+  #q2F:checked { counter-increment: c_justice 1 answered 1; }
+  #q3A:checked { counter-increment: c_duty 1 answered 1; }
+  #q3B:checked { counter-increment: c_util 1 answered 1; }
+  #q3C:checked { counter-increment: c_virtue 1 answered 1; }
+  #q3D:checked { counter-increment: c_caring 1 answered 1; }
+  #q3E:checked { counter-increment: c_egoism 1 answered 1; }
+  #q3F:checked { counter-increment: c_justice 1 answered 1; }
+  #q4A:checked { counter-increment: c_duty 1 answered 1; }
+  #q4B:checked { counter-increment: c_util 1 answered 1; }
+  #q4C:checked { counter-increment: c_virtue 1 answered 1; }
+  #q4D:checked { counter-increment: c_caring 1 answered 1; }
+  #q4E:checked { counter-increment: c_egoism 1 answered 1; }
+  #q4F:checked { counter-increment: c_justice 1 answered 1; }
+  #q5A:checked { counter-increment: c_duty 1 answered 1; }
+  #q5B:checked { counter-increment: c_util 1 answered 1; }
+  #q5C:checked { counter-increment: c_virtue 1 answered 1; }
+  #q5D:checked { counter-increment: c_caring 1 answered 1; }
+  #q5E:checked { counter-increment: c_egoism 1 answered 1; }
+  #q5F:checked { counter-increment: c_justice 1 answered 1; }
+  #q6A:checked { counter-increment: c_duty 1 answered 1; }
+  #q6B:checked { counter-increment: c_util 1 answered 1; }
+  #q6C:checked { counter-increment: c_virtue 1 answered 1; }
+  #q6D:checked { counter-increment: c_caring 1 answered 1; }
+  #q6E:checked { counter-increment: c_egoism 1 answered 1; }
+  #q6F:checked { counter-increment: c_justice 1 answered 1; }
+  #q7A:checked { counter-increment: c_duty 1 answered 1; }
+  #q7B:checked { counter-increment: c_util 1 answered 1; }
+  #q7C:checked { counter-increment: c_virtue 1 answered 1; }
+  #q7D:checked { counter-increment: c_caring 1 answered 1; }
+  #q7E:checked { counter-increment: c_egoism 1 answered 1; }
+  #q7F:checked { counter-increment: c_justice 1 answered 1; }
+  #q8A:checked { counter-increment: c_duty 1 answered 1; }
+  #q8B:checked { counter-increment: c_util 1 answered 1; }
+  #q8C:checked { counter-increment: c_virtue 1 answered 1; }
+  #q8D:checked { counter-increment: c_caring 1 answered 1; }
+  #q8E:checked { counter-increment: c_egoism 1 answered 1; }
+  #q8F:checked { counter-increment: c_justice 1 answered 1; }
+  #q9A:checked { counter-increment: c_duty 1 answered 1; }
+  #q9B:checked { counter-increment: c_util 1 answered 1; }
+  #q9C:checked { counter-increment: c_virtue 1 answered 1; }
+  #q9D:checked { counter-increment: c_caring 1 answered 1; }
+  #q9E:checked { counter-increment: c_egoism 1 answered 1; }
+  #q9F:checked { counter-increment: c_justice 1 answered 1; }
+  #q10A:checked { counter-increment: c_duty 1 answered 1; }
+  #q10B:checked { counter-increment: c_util 1 answered 1; }
+  #q10C:checked { counter-increment: c_virtue 1 answered 1; }
+  #q10D:checked { counter-increment: c_caring 1 answered 1; }
+  #q10E:checked { counter-increment: c_egoism 1 answered 1; }
+  #q10F:checked { counter-increment: c_justice 1 answered 1; }
+  .c-duty::after    { content: counter(c_duty); }
+  .c-util::after    { content: counter(c_util); }
+  .c-virtue::after  { content: counter(c_virtue); }
+  .c-caring::after  { content: counter(c_caring); }
+  .c-egoism::after  { content: counter(c_egoism); }
+  .c-justice::after { content: counter(c_justice); }
+  .c-answered::after { content: counter(answered); }
+
+  /* Per-situation readout, also script-free. */
+  .resp .ans::after { content: "\2013"; color: var(--muted); }
+  body:has(#q1A:checked) .resp .a1::after { content: "A"; color: var(--accent); }
+  body:has(#q1B:checked) .resp .a1::after { content: "B"; color: var(--accent); }
+  body:has(#q1C:checked) .resp .a1::after { content: "C"; color: var(--accent); }
+  body:has(#q1D:checked) .resp .a1::after { content: "D"; color: var(--accent); }
+  body:has(#q1E:checked) .resp .a1::after { content: "E"; color: var(--accent); }
+  body:has(#q1F:checked) .resp .a1::after { content: "F"; color: var(--accent); }
+  body:has(#q2A:checked) .resp .a2::after { content: "A"; color: var(--accent); }
+  body:has(#q2B:checked) .resp .a2::after { content: "B"; color: var(--accent); }
+  body:has(#q2C:checked) .resp .a2::after { content: "C"; color: var(--accent); }
+  body:has(#q2D:checked) .resp .a2::after { content: "D"; color: var(--accent); }
+  body:has(#q2E:checked) .resp .a2::after { content: "E"; color: var(--accent); }
+  body:has(#q2F:checked) .resp .a2::after { content: "F"; color: var(--accent); }
+  body:has(#q3A:checked) .resp .a3::after { content: "A"; color: var(--accent); }
+  body:has(#q3B:checked) .resp .a3::after { content: "B"; color: var(--accent); }
+  body:has(#q3C:checked) .resp .a3::after { content: "C"; color: var(--accent); }
+  body:has(#q3D:checked) .resp .a3::after { content: "D"; color: var(--accent); }
+  body:has(#q3E:checked) .resp .a3::after { content: "E"; color: var(--accent); }
+  body:has(#q3F:checked) .resp .a3::after { content: "F"; color: var(--accent); }
+  body:has(#q4A:checked) .resp .a4::after { content: "A"; color: var(--accent); }
+  body:has(#q4B:checked) .resp .a4::after { content: "B"; color: var(--accent); }
+  body:has(#q4C:checked) .resp .a4::after { content: "C"; color: var(--accent); }
+  body:has(#q4D:checked) .resp .a4::after { content: "D"; color: var(--accent); }
+  body:has(#q4E:checked) .resp .a4::after { content: "E"; color: var(--accent); }
+  body:has(#q4F:checked) .resp .a4::after { content: "F"; color: var(--accent); }
+  body:has(#q5A:checked) .resp .a5::after { content: "A"; color: var(--accent); }
+  body:has(#q5B:checked) .resp .a5::after { content: "B"; color: var(--accent); }
+  body:has(#q5C:checked) .resp .a5::after { content: "C"; color: var(--accent); }
+  body:has(#q5D:checked) .resp .a5::after { content: "D"; color: var(--accent); }
+  body:has(#q5E:checked) .resp .a5::after { content: "E"; color: var(--accent); }
+  body:has(#q5F:checked) .resp .a5::after { content: "F"; color: var(--accent); }
+  body:has(#q6A:checked) .resp .a6::after { content: "A"; color: var(--accent); }
+  body:has(#q6B:checked) .resp .a6::after { content: "B"; color: var(--accent); }
+  body:has(#q6C:checked) .resp .a6::after { content: "C"; color: var(--accent); }
+  body:has(#q6D:checked) .resp .a6::after { content: "D"; color: var(--accent); }
+  body:has(#q6E:checked) .resp .a6::after { content: "E"; color: var(--accent); }
+  body:has(#q6F:checked) .resp .a6::after { content: "F"; color: var(--accent); }
+  body:has(#q7A:checked) .resp .a7::after { content: "A"; color: var(--accent); }
+  body:has(#q7B:checked) .resp .a7::after { content: "B"; color: var(--accent); }
+  body:has(#q7C:checked) .resp .a7::after { content: "C"; color: var(--accent); }
+  body:has(#q7D:checked) .resp .a7::after { content: "D"; color: var(--accent); }
+  body:has(#q7E:checked) .resp .a7::after { content: "E"; color: var(--accent); }
+  body:has(#q7F:checked) .resp .a7::after { content: "F"; color: var(--accent); }
+  body:has(#q8A:checked) .resp .a8::after { content: "A"; color: var(--accent); }
+  body:has(#q8B:checked) .resp .a8::after { content: "B"; color: var(--accent); }
+  body:has(#q8C:checked) .resp .a8::after { content: "C"; color: var(--accent); }
+  body:has(#q8D:checked) .resp .a8::after { content: "D"; color: var(--accent); }
+  body:has(#q8E:checked) .resp .a8::after { content: "E"; color: var(--accent); }
+  body:has(#q8F:checked) .resp .a8::after { content: "F"; color: var(--accent); }
+  body:has(#q9A:checked) .resp .a9::after { content: "A"; color: var(--accent); }
+  body:has(#q9B:checked) .resp .a9::after { content: "B"; color: var(--accent); }
+  body:has(#q9C:checked) .resp .a9::after { content: "C"; color: var(--accent); }
+  body:has(#q9D:checked) .resp .a9::after { content: "D"; color: var(--accent); }
+  body:has(#q9E:checked) .resp .a9::after { content: "E"; color: var(--accent); }
+  body:has(#q9F:checked) .resp .a9::after { content: "F"; color: var(--accent); }
+  body:has(#q10A:checked) .resp .a10::after { content: "A"; color: var(--accent); }
+  body:has(#q10B:checked) .resp .a10::after { content: "B"; color: var(--accent); }
+  body:has(#q10C:checked) .resp .a10::after { content: "C"; color: var(--accent); }
+  body:has(#q10D:checked) .resp .a10::after { content: "D"; color: var(--accent); }
+  body:has(#q10E:checked) .resp .a10::after { content: "E"; color: var(--accent); }
+  body:has(#q10F:checked) .resp .a10::after { content: "F"; color: var(--accent); }
+
+  .js-only { display: none; }
+  html.has-js .js-only { display: revert; }
+  html.has-js .no-js-only { display: none; }
+
+  body {
+    margin: 0;
+    padding-top: env(safe-area-inset-top, 0px);
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+
+  .wrap { max-width: 50rem; margin: 0 auto; padding-inline: 20px; padding-block: 0 7rem; }
+
+  h1, h2, h3 {
+    font-family: Newsreader, Georgia, "Times New Roman", serif;
+    font-weight: 600; text-wrap: balance; margin: 0; line-height: 1.15;
+  }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted); margin: 0;
+  }
+
+  header.masthead { padding-block: 3rem 2rem; border-bottom: 2px solid var(--ink); }
+  header.masthead h1 {
+    font-size: clamp(2rem, 5.6vw, 2.9rem); letter-spacing: -.015em; margin-block: .5rem .6rem;
+  }
+  header.masthead .standfirst {
+    font-family: Newsreader, Georgia, serif; font-size: 1.18rem; line-height: 1.5;
+    color: var(--ink-2); max-width: 42ch; margin: 0;
+  }
+  .meta {
+    display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin-top: 1.5rem;
+    font-size: .82rem; color: var(--muted);
+  }
+  .meta span { display: flex; align-items: baseline; gap: .4rem; }
+  .meta b {
+    font-family: "IBM Plex Mono", monospace; font-weight: 500;
+    color: var(--ink-2); font-variant-numeric: tabular-nums;
+  }
+
+  .brief { padding-block: 2rem; border-bottom: 1px solid var(--rule); }
+  .brief h2 { font-size: 1.3rem; margin-bottom: .6rem; }
+  .brief p { margin: 0 0 .9rem; max-width: 62ch; color: var(--ink-2); }
+  .brief ol { margin: 0 0 .9rem; padding-left: 1.3rem; max-width: 62ch; color: var(--ink-2); }
+  .brief li { margin-bottom: .35rem; }
+  .brief p:last-of-type { margin-bottom: 0; }
+
+  .privacy {
+    display: flex; gap: .7rem; align-items: flex-start; margin-top: 1.4rem;
+    padding: .85rem 1rem; background: var(--surface-2);
+    border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0;
+    font-size: .88rem; color: var(--ink-2);
+  }
+  .privacy svg { flex: none; margin-top: .15rem; }
+
+  .idrow { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.6rem; }
+  .idfield { flex: 1 1 12rem; }
+  .idfield label {
+    display: block; font-size: .72rem; font-family: "IBM Plex Mono", monospace;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .3rem;
+  }
+  .idfield input {
+    width: 100%; font-family: "IBM Plex Sans", system-ui, sans-serif; font-size: .95rem;
+    color: var(--ink); background: var(--surface); border: 1px solid var(--rule);
+    border-radius: 7px; padding: .55rem .75rem;
+  }
+  .idfield input:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; border-color: var(--accent); }
+
+  /* ---------- response alternatives reference ---------- */
+  .key {
+    margin-block: 2rem 1.2rem; padding: 1.2rem 1.3rem; background: var(--surface);
+    border: 1px solid var(--rule); border-radius: 10px; box-shadow: var(--shadow);
+  }
+  .key > .eyebrow { margin-bottom: .3rem; }
+  .key > p.sub { margin: 0 0 1.1rem; font-size: .88rem; color: var(--muted); max-width: 58ch; }
+  .alt { display: flex; gap: .9rem; padding: .7rem 0; border-top: 1px solid var(--rule-soft); }
+  .alt:first-of-type { border-top: 0; padding-top: 0; }
+  .alt-ltr {
+    flex: none; width: 1.5rem; height: 1.5rem; border-radius: 4px;
+    background: var(--surface-2); color: var(--accent);
+    font-family: "IBM Plex Mono", monospace; font-size: .78rem; font-weight: 600;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .alt-q { margin: 0 0 .2rem; font-size: .92rem; font-weight: 600; color: var(--ink); }
+  .alt-d { margin: 0; font-size: .85rem; color: var(--muted); line-height: 1.45; max-width: 60ch; }
+
+  /* ---------- situations ---------- */
+  .items { margin: 0; padding: 0; border: 0; min-width: 0; }
+  .items > legend {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap;
+  }
+  .item {
+    background: var(--surface); border: 1px solid var(--rule-soft); border-radius: 10px;
+    padding: 1.2rem 1.25rem 1.25rem; margin-bottom: .8rem;
+  }
+  .item.flag { border-color: var(--gold); background: var(--gold-soft); }
+  .item-head { display: flex; gap: .85rem; align-items: baseline; margin-bottom: 1rem; }
+  .item-n {
+    font-family: "IBM Plex Mono", monospace; font-size: .78rem; font-weight: 500;
+    font-variant-numeric: tabular-nums; color: var(--muted); flex: none; width: 1.6rem; padding-top: .2rem;
+  }
+  .item-q {
+    font-family: Newsreader, Georgia, serif; font-size: 1.08rem; line-height: 1.5;
+    color: var(--ink); margin: 0;
+  }
+
+  .choices { display: flex; flex-direction: column; gap: .3rem; margin-left: 2.45rem; }
+  @media (max-width: 560px) { .choices { margin-left: 0; } }
+  .choices input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+  .choices label {
+    display: flex; align-items: flex-start; gap: .7rem;
+    padding: .55rem .7rem; border: 1px solid var(--rule); border-radius: 7px;
+    background: var(--surface); cursor: pointer;
+    transition: background .12s ease, border-color .12s ease;
+  }
+  .choices label:hover { border-color: var(--accent); background: var(--surface-2); }
+  .choices .ltr {
+    flex: none; font-family: "IBM Plex Mono", monospace; font-size: .78rem;
+    font-weight: 600; color: var(--muted); padding-top: .08rem; width: .9rem;
+  }
+  .choices .txt { font-size: .92rem; line-height: 1.4; color: var(--ink-2); }
+  .choices input:checked + label { background: var(--accent); border-color: var(--accent); }
+  .choices input:checked + label .ltr,
+  .choices input:checked + label .txt { color: var(--accent-ink); }
+  .choices input:focus-visible + label { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+  /* ---------- fixed tally ---------- */
+  .tally {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+    background: color-mix(in srgb, var(--surface) 94%, transparent);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid var(--rule); padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .tally-inner {
+    max-width: 50rem; margin: 0 auto; padding-inline: 20px; padding-block: .65rem;
+    display: flex; align-items: center; gap: .75rem 1.25rem; flex-wrap: wrap;
+    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .8rem;
+    font-variant-numeric: tabular-nums; color: var(--ink-2);
+  }
+  .tally b { color: var(--ink); font-weight: 600; }
+  .tally a.jump {
+    margin-left: auto; color: var(--accent); text-decoration: none;
+    border: 1px solid var(--accent); border-radius: 6px; padding: .4rem .9rem;
+    font-size: .78rem; white-space: nowrap;
+  }
+  .tally a.jump:hover { background: var(--accent); color: var(--accent-ink); }
+  .tally a.jump:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  @media (max-width: 460px) { .tally-inner { font-size: .72rem; } }
+
+  /* ---------- results ---------- */
+  .results { margin-top: 3rem; scroll-margin-top: 1.5rem; }
+
+  .chart-card {
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 12px;
+    box-shadow: var(--shadow); padding: 1.5rem 1.5rem 1.3rem;
+  }
+  .chart-card > h2 { font-size: 1.5rem; margin-bottom: .25rem; }
+  .chart-card > p.sub { margin: 0 0 1.4rem; font-size: .88rem; color: var(--muted); max-width: 58ch; }
+
+  .headline {
+    margin: 0 0 1.4rem; padding: .9rem 1.1rem;
+    background: var(--surface-2); border-left: 3px solid var(--accent);
+    border-radius: 0 7px 7px 0;
+  }
+  .headline .eyebrow { margin-bottom: .2rem; }
+  .headline p.hl {
+    margin: 0; font-family: Newsreader, Georgia, serif; font-size: 1.3rem;
+    font-weight: 600; color: var(--ink); line-height: 1.25;
+  }
+  .headline p.note { margin: .35rem 0 0; font-size: .82rem; color: var(--muted); }
+
+  .plot { position: relative; }
+  .bar-row {
+    display: grid; grid-template-columns: 11rem 1fr 1.8rem;
+    align-items: center; gap: .75rem; padding-block: 3px;
+  }
+  .bar-label { font-size: .86rem; color: var(--ink-2); line-height: 1.25; }
+  .bar-label b {
+    font-family: "IBM Plex Mono", monospace; font-size: .76rem;
+    color: var(--muted); font-weight: 600; margin-right: .35rem;
+  }
+  .track {
+    position: relative; display: block; height: 18px;
+    background: var(--surface-2); border-radius: 3px; overflow: hidden;
+  }
+  .track .fill {
+    display: block; height: 100%; width: 0;
+    background: var(--accent); border-radius: 0 4px 4px 0;
+    transition: width .35s ease;
+  }
+  @media (prefers-reduced-motion: reduce) { .track .fill { transition: none; } }
+  .bar-val {
+    font-family: "IBM Plex Mono", monospace; font-size: .84rem; font-weight: 600;
+    font-variant-numeric: tabular-nums; color: var(--ink); text-align: right;
+  }
+  .axis { display: grid; grid-template-columns: 11rem 1fr 1.8rem; gap: .75rem; margin-top: .5rem; }
+  .axis .ticks { position: relative; height: 1rem; }
+  .axis .ticks span {
+    position: absolute; transform: translateX(-50%); top: 0;
+    font-family: "IBM Plex Mono", monospace; font-size: .64rem; color: var(--muted);
+  }
+  .axis-note { grid-column: 2; font-size: .68rem; color: var(--muted); margin: 0; text-align: center; }
+  @media (max-width: 620px) {
+    .bar-row, .axis { grid-template-columns: 1fr 1.8rem; }
+    .bar-label { grid-column: 1 / -1; margin-bottom: .1rem; }
+    .axis .ticks { grid-column: 1; }
+    .axis-note { grid-column: 1 / -1; }
+  }
+  .plot .grid {
+    position: absolute; top: 0; bottom: 1.6rem;
+    left: 11.75rem; right: 2.55rem; pointer-events: none;
+  }
+  .plot .grid i { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--grid); }
+  @media (max-width: 620px) { .plot .grid { left: 0; right: 2.55rem; } }
+
+  .sum-row {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+    padding: .5rem 0; border-top: 1px solid var(--rule-soft);
+  }
+  .sum-row .nm { font-size: .9rem; color: var(--ink-2); }
+  .sum-row .nm b {
+    font-family: "IBM Plex Mono", monospace; font-size: .76rem; color: var(--muted);
+  }
+  .sum-row .val {
+    font-family: "IBM Plex Mono", monospace; font-size: .9rem;
+    font-variant-numeric: tabular-nums; color: var(--ink); white-space: nowrap;
+  }
+  .sum-row .val b { font-weight: 600; color: var(--accent); }
+  .sum-row .of { color: var(--muted); }
+
+  /* ---------- style descriptions ---------- */
+  .styles { margin-top: 1.8rem; }
+  .styles > .eyebrow { margin-bottom: .8rem; }
+  .style-row { padding: .85rem 0; border-top: 1px solid var(--rule-soft); }
+  .style-row.top { background: var(--surface-2); border-radius: 7px; padding-inline: .9rem; margin-inline: -.9rem; }
+  .style-nm {
+    margin: 0 0 .25rem; font-size: .98rem; font-weight: 600; color: var(--ink);
+    display: flex; align-items: center; gap: .5rem;
+  }
+  .style-nm .dot {
+    width: .55rem; height: .55rem; border-radius: 2px; background: var(--rule); flex: none;
+  }
+  .style-row.top .style-nm .dot { background: var(--accent); }
+  .style-row.top .style-nm { color: var(--accent); }
+  .style-ct {
+    margin-left: auto; font-family: "IBM Plex Mono", monospace; font-size: .8rem;
+    font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums;
+  }
+  .style-row.top .style-ct { color: var(--accent); }
+  .style-d { margin: 0; font-size: .88rem; color: var(--muted); line-height: 1.5; max-width: 66ch; }
+
+  .reading {
+    margin-top: 1.8rem; padding-top: 1.2rem; border-top: 1px solid var(--rule-soft);
+    font-size: .9rem; color: var(--ink-2); max-width: 64ch;
+  }
+  .reading p { margin: 0 0 .7rem; }
+  .reading p:last-child { margin-bottom: 0; }
+
+  /* ---------- reflection ---------- */
+  .reflect { margin-top: 2.5rem; }
+  .reflect > h2 { font-size: 1.45rem; margin-bottom: .3rem; }
+  .reflect > p.sub { color: var(--muted); font-size: .9rem; margin: 0 0 1.2rem; max-width: 58ch; }
+  .prompt {
+    background: var(--surface); border: 1px solid var(--rule-soft); border-radius: 10px;
+    padding: 1.1rem 1.15rem; margin-bottom: .7rem;
+  }
+  .prompt label {
+    display: block; font-family: Newsreader, Georgia, serif; font-size: 1.05rem;
+    line-height: 1.4; margin-bottom: .7rem; color: var(--ink);
+  }
+  .prompt textarea {
+    width: 100%; min-height: 9rem; resize: vertical;
+    font-family: "IBM Plex Sans", system-ui, sans-serif; font-size: .95rem; line-height: 1.5;
+    color: var(--ink); background: var(--paper); border: 1px solid var(--rule);
+    border-radius: 7px; padding: .65rem .8rem;
+  }
+  .prompt textarea:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; border-color: var(--accent); }
+  .prompt textarea::placeholder { color: var(--muted); opacity: .75; }
+
+  /* ---------- submit ---------- */
+  .submit-card {
+    margin-top: 2.5rem; background: var(--surface); border: 2px solid var(--accent);
+    border-radius: 12px; padding: 1.4rem 1.4rem 1.5rem; box-shadow: var(--shadow);
+  }
+  .submit-card h2 { font-size: 1.4rem; margin-bottom: .4rem; }
+  .submit-card > p { margin: 0 0 1rem; font-size: .92rem; color: var(--ink-2); max-width: 62ch; }
+  .steps { margin: 0 0 1.1rem; padding-left: 1.2rem; font-size: .9rem; color: var(--ink-2); line-height: 1.6; }
+  .steps li { margin-bottom: .3rem; }
+  .resp, .tmpl, #submitText {
+    width: 100%; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .78rem;
+    line-height: 1.7; color: var(--ink); background: var(--paper);
+    border: 1px solid var(--rule); border-radius: 7px; padding: .75rem .85rem;
+    margin: 0 0 1rem; overflow-x: auto; white-space: pre;
+  }
+  .resp { -webkit-user-select: all; user-select: all; }
+  .resp .ans { font-weight: 600; }
+  #submitText { min-height: 12rem; resize: vertical; margin-bottom: 0; }
+  #submitText:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+
+  .actions { display: flex; flex-wrap: wrap; gap: .7rem; align-items: center; margin-top: 1.1rem; }
+  button {
+    font-family: "IBM Plex Sans", system-ui, sans-serif; font-size: .92rem; font-weight: 500;
+    padding: .7rem 1.3rem; border-radius: 7px; border: 1px solid transparent; cursor: pointer;
+  }
+  button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .btn-primary { background: var(--accent); color: var(--accent-ink); }
+  .btn-primary:hover { background: var(--accent-2); }
+  .btn-ghost { background: transparent; color: var(--ink-2); border-color: var(--rule); }
+  .btn-ghost:hover { border-color: var(--muted); background: var(--surface-2); }
+  .hint { font-size: .84rem; color: var(--muted); }
+  .hint.warn { color: var(--gold); font-weight: 500; }
+  .hint.ok { color: var(--accent); font-weight: 500; }
+
+  footer.colophon {
+    margin-top: 3rem; padding-top: 1.3rem; border-top: 1px solid var(--rule);
+    font-size: .8rem; color: var(--muted); line-height: 1.6;
+  }
+  footer.colophon p { margin: 0 0 .5rem; max-width: 62ch; }
+  footer.colophon p.cite {
+    margin-top: 1rem; padding-top: .8rem; border-top: 1px solid var(--rule-soft); font-size: .74rem;
+  }
+  footer.colophon cite { font-style: italic; }
+  footer.colophon a { color: var(--accent); }
+
+  @media print {
+    :root {
+      --paper:#fff; --surface:#fff; --surface-2:#f4f4f4; --ink:#000; --ink-2:#222;
+      --muted:#555; --accent:#14524b; --rule:#bbb; --rule-soft:#ddd; --grid:#ccc; --shadow:none;
+    }
+    .tally, .actions, .no-print { display: none !important; }
+    .wrap { padding-block: 0 1rem; }
+    body { font-size: 11pt; }
+    .item, .prompt, .chart-card, .submit-card, .alt { break-inside: avoid; box-shadow: none; }
+    .choices input:checked + label { background: #14524b !important; }
+    .choices input:checked + label, .track .fill, .item.flag {
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+    .results { break-before: page; }
+    .idfield input { border: 0; border-bottom: 1px solid #000; border-radius: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Leadership Self-Assessment&nbsp;&nbsp;&middot;&nbsp;&nbsp;Questionnaire 11.3</p>
+    <h1>Ethical Leadership Style Questionnaire</h1>
+    <p class="standfirst">Ten situations in which a leader faces an ethical dilemma. Your choices point to the ethical perspective behind the decisions you would make.</p>
+    <div class="meta">
+      <span>Situations <b>10</b></span>
+      <span>Choices each <b>6</b></span>
+      <span>Perspectives <b>6</b></span>
+      <span>Time <b>~15 min</b></span>
+    </div>
+  </header>
+
+  <section class="brief">
+    <h2>Before you begin</h2>
+    <ol>
+      <li>Read each of the 10 hypothetical situations in which a leader is confronted with an ethical dilemma.</li>
+      <li>Place yourself in the role of the leader or manager in the situation.</li>
+      <li>For each situation, choose your <em>most preferred response</em> &mdash; the one that best describes <strong>why</strong> you would do what you would do. Choose only one. There are no right or wrong answers.</li>
+    </ol>
+    <p>The same six responses follow every situation. Read what each one means before you start, since the whole point of the exercise is which reason you reach for.</p>
+
+    <div class="privacy">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M8 1.5 3 3.5v4c0 3 2.1 5.6 5 7 2.9-1.4 5-4 5-7v-4L8 1.5Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+        <path d="m5.8 7.9 1.6 1.6 3-3.2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span><strong>Your individual choices stay on your device.</strong> This page sends nothing anywhere. Your work is saved in this browser so you can close the page and come back.</span>
+    </div>
+
+    <div class="idrow">
+      <div class="idfield">
+        <label for="studentName">Your name</label>
+        <input type="text" id="studentName" autocomplete="name" placeholder="First and last">
+      </div>
+      <div class="idfield">
+        <label for="studentDate">Date completed</label>
+        <input type="text" id="studentDate" placeholder="e.g. October 23, 2026">
+      </div>
+    </div>
+  </section>
+
+  <div class="key">
+    <p class="eyebrow">The six responses</p>
+    <p class="sub">These are the same for every situation. Each one stands for a different ethical perspective, named only after you finish.</p>
+      <div class="alt">
+        <span class="alt-ltr">A</span>
+        <div>
+          <p class="alt-q">&ldquo;I would do what is right.&rdquo;</p>
+          <p class="alt-d">You follow a set of moral rules and do what is expected of you when facing an ethical dilemma. You focus on fulfilling your moral obligations and doing your duty.</p>
+        </div>
+      </div>
+      <div class="alt">
+        <span class="alt-ltr">B</span>
+        <div>
+          <p class="alt-q">&ldquo;I would do what benefits the most people.&rdquo;</p>
+          <p class="alt-d">You try to do what is best for the most people overall when facing an ethical dilemma. You focus on what will result in happiness for the largest number of individuals.</p>
+        </div>
+      </div>
+      <div class="alt">
+        <span class="alt-ltr">C</span>
+        <div>
+          <p class="alt-q">&ldquo;I would do what a good person would do.&rdquo;</p>
+          <p class="alt-d">You pull from who you are (your character) when facing an ethical dilemma. You act out of integrity, and you are faithful to your own principles.</p>
+        </div>
+      </div>
+      <div class="alt">
+        <span class="alt-ltr">D</span>
+        <div>
+          <p class="alt-q">&ldquo;I would do what shows that I care about my relationships.&rdquo;</p>
+          <p class="alt-d">You give attention to your relationships when facing an ethical dilemma. You may give special consideration to those with whom you share a personal bond or commitment.</p>
+        </div>
+      </div>
+      <div class="alt">
+        <span class="alt-ltr">E</span>
+        <div>
+          <p class="alt-q">&ldquo;I would do what benefits me the most.&rdquo;</p>
+          <p class="alt-d">You do what is best for accomplishing your personal goals and objectives when facing an ethical dilemma. You are not afraid to assert your own interests when resolving problems.</p>
+        </div>
+      </div>
+      <div class="alt">
+        <span class="alt-ltr">F</span>
+        <div>
+          <p class="alt-q">&ldquo;I would do what is fair.&rdquo;</p>
+          <p class="alt-d">You focus on treating others fairly when facing an ethical dilemma. You try to make sure the benefits and burdens of decisions are shared equitably between everyone concerned.</p>
+        </div>
+      </div>
+  </div>
+
+  <form id="survey">
+    <fieldset class="items" id="itemList">
+      <legend>Ethical Leadership Style Questionnaire situations</legend>
+        <div class="item" id="item-1">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">01</span>
+            <p class="item-q" id="q-1">You are the leader of a manufacturing team and learn that your employees are falsifying product quality results to sell more products. If you report the matter, most of them will lose their jobs, you may lose yours, and your company will take a significant hit to its reputation. What would you do in this situation?</p>
+          </div>
+          <div class="choices" role="radiogroup" aria-labelledby="q-1">
+            <input type="radio" name="q1" id="q1A" value="A"><label for="q1A"><span class="ltr">A</span><span class="txt">I would do what is right.</span></label>
+            <input type="radio" name="q1" id="q1B" value="B"><label for="q1B"><span class="ltr">B</span><span class="txt">I would do what benefits the most people.</span></label>
+            <input type="radio" name="q1" id="q1C" value="C"><label for="q1C"><span class="ltr">C</span><span class="txt">I would do what a good person would do.</span></label>
+            <input type="radio" name="q1" id="q1D" value="D"><label for="q1D"><span class="ltr">D</span><span class="txt">I would do what shows that I care about my relationships.</span></label>
+            <input type="radio" name="q1" id="q1E" value="E"><label for="q1E"><span class="ltr">E</span><span class="txt">I would do what benefits me the most.</span></label>
+            <input type="radio" name="q1" id="q1F" value="F"><label for="q1F"><span class="ltr">F</span><span class="txt">I would do what is fair.</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-2">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">02</span>
+            <p class="item-q" id="q-2">You have an employee who has been having performance problems, which is making it hard for your group to meet its work quota. This person was recommended to you as a solid performer. You now believe the person’s former manager had problems with the employee and just wanted to get rid of the person. If you give the underperforming employee a good recommendation, leaving out the performance problems, you will have an opportunity to pass the employee off to another group. What would you do in this situation?</p>
+          </div>
+          <div class="choices" role="radiogroup" aria-labelledby="q-2">
+            <input type="radio" name="q2" id="q2A" value="A"><label for="q2A"><span class="ltr">A</span><span class="txt">I would do what is right.</span></label>
+            <input type="radio" name="q2" id="q2B" value="B"><label for="q2B"><span class="ltr">B</span><span class="txt">I would do what benefits the most people.</span></label>
+            <input type="radio" name="q2" id="q2C" value="C"><label for="q2C"><span class="ltr">C</span><span class="txt">I would do what a good person would do.</span></label>
+            <input type="radio" name="q2" id="q2D" value="D"><label for="q2D"><span class="ltr">D</span><span class="txt">I would do what shows that I care about my relationships.</span></label>
+            <input type="radio" name="q2" id="q2E" value="E"><label for="q2E"><span class="ltr">E</span><span class="txt">I would do what benefits me the most.</span></label>
+            <input type="radio" name="q2" id="q2F" value="F"><label for="q2F"><span class="ltr">F</span><span class="txt">I would do what is fair.</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-3">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">03</span>
+            <p class="item-q" id="q-3">Your team is hard-pressed to complete a critical project. You hear about a job opening that would be much better for one of your key employees’ career. If this individual leaves the team, it would put the project in danger. What would you do in this situation?</p>
+          </div>
+          <div class="choices" role="radiogroup" aria-labelledby="q-3">
+            <input type="radio" name="q3" id="q3A" value="A"><label for="q3A"><span class="ltr">A</span><span class="txt">I would do what is right.</span></label>
+            <input type="radio" name="q3" id="q3B" value="B"><label for="q3B"><span class="ltr">B</span><span class="txt">I would do what benefits the most people.</span></label>
+            <input type="radio" name="q3" id="q3C" value="C"><label for="q3C"><span class="ltr">C</span><span class="txt">I would do what a good person would do.</span></label>
+            <input type="radio" name="q3" id="q3D" value="D"><label for="q3D"><span class="ltr">D</span><span class="txt">I would do what shows that I care about my relationships.</span></label>
+            <input type="radio" name="q3" id="q3E" value="E"><label for="q3E"><span class="ltr">E</span><span class="txt">I would do what benefits me the most.</span></label>
+            <input type="radio" name="q3" id="q3F" value="F"><label for="q3F"><span class="ltr">F</span><span class="txt">I would do what is fair.</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-4">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">04</span>
+            <p class="item-q" id="q-4">An employee of yours has a child with a serious illness and is having trouble fulfilling obligations at work. You learn from your administrative assistant that this employee claimed 40 hours on a timesheet for a week when the employee actually only worked 30 hours. What would you do in this situation?</p>
+          </div>
+          <div class="choices" role="radiogroup" aria-labelledby="q-4">
+            <input type="radio" name="q4" id="q4A" value="A"><label for="q4A"><span class="ltr">A</span><span class="txt">I would do what is right.</span></label>
+            <input type="radio" name="q4" id="q4B" value="B"><label for="q4B"><span class="ltr">B</span><span class="txt">I would do what benefits the most people.</span></label>
+            <input type="radio" name="q4" id="q4C" value="C"><label for="q4C"><span class="ltr">C</span><span class="txt">I would do what a good person would do.</span></label>
+            <input type="radio" name="q4" id="q4D" value="D"><label for="q4D"><span class="ltr">D</span><span class="txt">I would do what shows that I care about my relationships.</span></label>
+            <input type="radio" name="q4" id="q4E" value="E"><label for="q4E"><span class="ltr">E</span><span class="txt">I would do what benefits me the most.</span></label>
+            <input type="radio" name="q4" id="q4F" value="F"><label for="q4F"><span class="ltr">F</span><span class="txt">I would do what is fair.</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-5">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">05</span>
+            <p class="item-q" id="q-5">You are a manager, and some of your employees can finish their quotas in much less than the allotted time to do so. If upper management becomes aware of this, they will want you to increase the quotas. Some of your employees are unable to meet their current quotas. What would you do in this situation?</p>
+          </div>
+          <div class="choices" role="radiogroup" aria-labelledby="q-5">
+            <input type="radio" name="q5" id="q5A" value="A"><label for="q5A"><span class="ltr">A</span><span class="txt">I would do what is right.</span></label>
+            <input type="radio" name="q5" id="q5B" value="B"><label for="q5B"><span class="ltr">B</span><span class="txt">I would do what benefits the most people.</span></label>
+            <input type="radio" name="q5" id="q5C" value="C"><label for="q5C"><span class="ltr">C</span><span class="txt">I would do what a good person would do.</span></label>
+            <input type="radio" name="q5" id="q5D" value="D"><label for="q5D"><span class="ltr">D</span><span class="txt">I would do what shows that I care about my relationships.</span></label>
+            <input type="radio" name="q5" id="q5E" value="E"><label for="q5E"><span class="ltr">E</span><span class="txt">I would do what benefits me the most.</span></label>
+            <input type="radio" name="q5" id="q5F" value="F"><label for="q5F"><span class="ltr">F</span><span class="txt">I would do what is fair.</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-6">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">06</span>
+            <p class="item-q" id="q-6">You are an organization’s chief financial officer, and you are aware that the chief executive officer and other members of the senior leadership team want to provide exaggerated financial information to keep the company’s stock price high. The entire senior management team holds significant stock positions. What would you do in this situation?</p>
+          </div>
+          <div class="choices" role="radiogroup" aria-labelledby="q-6">
+            <input type="radio" name="q6" id="q6A" value="A"><label for="q6A"><span class="ltr">A</span><span class="txt">I would do what is right.</span></label>
+            <input type="radio" name="q6" id="q6B" value="B"><label for="q6B"><span class="ltr">B</span><span class="txt">I would do what benefits the most people.</span></label>
+            <input type="radio" name="q6" id="q6C" value="C"><label for="q6C"><span class="ltr">C</span><span class="txt">I would do what a good person would do.</span></label>
+            <input type="radio" name="q6" id="q6D" value="D"><label for="q6D"><span class="ltr">D</span><span class="txt">I would do what shows that I care about my relationships.</span></label>
+            <input type="radio" name="q6" id="q6E" value="E"><label for="q6E"><span class="ltr">E</span><span class="txt">I would do what benefits me the most.</span></label>
+            <input type="radio" name="q6" id="q6F" value="F"><label for="q6F"><span class="ltr">F</span><span class="txt">I would do what is fair.</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-7">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">07</span>
+            <p class="item-q" id="q-7">Two new employees have joined your accounting team right out of school. They are regularly found surfing the internet or texting on their phones. Your accounting work regularly requires overtime at the end of the month to get the financial reports completed. These employees refuse to do any overtime, which shifts work to other team members. The other team members are getting resentful and upset. What would you do in this situation?</p>
+          </div>
+          <div class="choices" role="radiogroup" aria-labelledby="q-7">
+            <input type="radio" name="q7" id="q7A" value="A"><label for="q7A"><span class="ltr">A</span><span class="txt">I would do what is right.</span></label>
+            <input type="radio" name="q7" id="q7B" value="B"><label for="q7B"><span class="ltr">B</span><span class="txt">I would do what benefits the most people.</span></label>
+            <input type="radio" name="q7" id="q7C" value="C"><label for="q7C"><span class="ltr">C</span><span class="txt">I would do what a good person would do.</span></label>
+            <input type="radio" name="q7" id="q7D" value="D"><label for="q7D"><span class="ltr">D</span><span class="txt">I would do what shows that I care about my relationships.</span></label>
+            <input type="radio" name="q7" id="q7E" value="E"><label for="q7E"><span class="ltr">E</span><span class="txt">I would do what benefits me the most.</span></label>
+            <input type="radio" name="q7" id="q7F" value="F"><label for="q7F"><span class="ltr">F</span><span class="txt">I would do what is fair.</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-8">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">08</span>
+            <p class="item-q" id="q-8">You are the director of a neighborhood food cooperative. A member—a single parent with four children—is caught shoplifting $30 in groceries from the co-op. You suspect this person has been stealing for years. You consider pressing charges. What would you do in this situation?</p>
+          </div>
+          <div class="choices" role="radiogroup" aria-labelledby="q-8">
+            <input type="radio" name="q8" id="q8A" value="A"><label for="q8A"><span class="ltr">A</span><span class="txt">I would do what is right.</span></label>
+            <input type="radio" name="q8" id="q8B" value="B"><label for="q8B"><span class="ltr">B</span><span class="txt">I would do what benefits the most people.</span></label>
+            <input type="radio" name="q8" id="q8C" value="C"><label for="q8C"><span class="ltr">C</span><span class="txt">I would do what a good person would do.</span></label>
+            <input type="radio" name="q8" id="q8D" value="D"><label for="q8D"><span class="ltr">D</span><span class="txt">I would do what shows that I care about my relationships.</span></label>
+            <input type="radio" name="q8" id="q8E" value="E"><label for="q8E"><span class="ltr">E</span><span class="txt">I would do what benefits me the most.</span></label>
+            <input type="radio" name="q8" id="q8F" value="F"><label for="q8F"><span class="ltr">F</span><span class="txt">I would do what is fair.</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-9">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">09</span>
+            <p class="item-q" id="q-9">You have been accused of discriminating against a particular gender in your hiring practices. A new position opens up, and you could hire a candidate of the gender you’ve been accused of discriminating against over a candidate of another gender, even though the latter candidate has slightly better qualifications. Hiring the former candidate would let you address this accusation and improve your reputation in the company. What would you do in this situation?</p>
+          </div>
+          <div class="choices" role="radiogroup" aria-labelledby="q-9">
+            <input type="radio" name="q9" id="q9A" value="A"><label for="q9A"><span class="ltr">A</span><span class="txt">I would do what is right.</span></label>
+            <input type="radio" name="q9" id="q9B" value="B"><label for="q9B"><span class="ltr">B</span><span class="txt">I would do what benefits the most people.</span></label>
+            <input type="radio" name="q9" id="q9C" value="C"><label for="q9C"><span class="ltr">C</span><span class="txt">I would do what a good person would do.</span></label>
+            <input type="radio" name="q9" id="q9D" value="D"><label for="q9D"><span class="ltr">D</span><span class="txt">I would do what shows that I care about my relationships.</span></label>
+            <input type="radio" name="q9" id="q9E" value="E"><label for="q9E"><span class="ltr">E</span><span class="txt">I would do what benefits me the most.</span></label>
+            <input type="radio" name="q9" id="q9F" value="F"><label for="q9F"><span class="ltr">F</span><span class="txt">I would do what is fair.</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-10">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">10</span>
+            <p class="item-q" id="q-10">You are a professor. One of your best students buys an essay online and turns it in for a grade. Later in the term, the student begins to feel guilty and confesses to you that the paper was purchased. It is the norm at the university to fail a student guilty of plagiarism. You must decide if you will flunk the student. What would you do in this situation?</p>
+          </div>
+          <div class="choices" role="radiogroup" aria-labelledby="q-10">
+            <input type="radio" name="q10" id="q10A" value="A"><label for="q10A"><span class="ltr">A</span><span class="txt">I would do what is right.</span></label>
+            <input type="radio" name="q10" id="q10B" value="B"><label for="q10B"><span class="ltr">B</span><span class="txt">I would do what benefits the most people.</span></label>
+            <input type="radio" name="q10" id="q10C" value="C"><label for="q10C"><span class="ltr">C</span><span class="txt">I would do what a good person would do.</span></label>
+            <input type="radio" name="q10" id="q10D" value="D"><label for="q10D"><span class="ltr">D</span><span class="txt">I would do what shows that I care about my relationships.</span></label>
+            <input type="radio" name="q10" id="q10E" value="E"><label for="q10E"><span class="ltr">E</span><span class="txt">I would do what benefits me the most.</span></label>
+            <input type="radio" name="q10" id="q10F" value="F"><label for="q10F"><span class="ltr">F</span><span class="txt">I would do what is fair.</span></label>
+          </div>
+        </div>
+    </fieldset>
+  </form>
+
+  <section class="results" id="results">
+
+    <div class="chart-card">
+      <h2>Your ethical profile</h2>
+      <p class="sub">How many times out of 10 you chose each perspective. Your highest score is your primary or dominant ethical style; your second-highest is next most important, and so on.</p>
+
+      <div class="headline js-only" id="headline">
+        <p class="eyebrow">Dominant perspective</p>
+        <p class="hl" id="headlineText">&mdash;</p>
+        <p class="note" id="headlineNote">Answer all 10 situations to see your result.</p>
+      </div>
+
+      <div class="js-only">
+        <div class="plot" id="plot">
+          <div class="grid" id="grid" aria-hidden="true"></div>
+        <div class="bar-row" data-style="duty">
+          <span class="bar-label"><b>A</b> Duty Ethics</span>
+          <span class="track"><i class="fill"></i></span>
+          <span class="bar-val">0</span>
+        </div>
+        <div class="bar-row" data-style="util">
+          <span class="bar-label"><b>B</b> Utilitarian Ethics</span>
+          <span class="track"><i class="fill"></i></span>
+          <span class="bar-val">0</span>
+        </div>
+        <div class="bar-row" data-style="virtue">
+          <span class="bar-label"><b>C</b> Virtue Ethics</span>
+          <span class="track"><i class="fill"></i></span>
+          <span class="bar-val">0</span>
+        </div>
+        <div class="bar-row" data-style="caring">
+          <span class="bar-label"><b>D</b> Caring Ethics</span>
+          <span class="track"><i class="fill"></i></span>
+          <span class="bar-val">0</span>
+        </div>
+        <div class="bar-row" data-style="egoism">
+          <span class="bar-label"><b>E</b> Egoism Ethics</span>
+          <span class="track"><i class="fill"></i></span>
+          <span class="bar-val">0</span>
+        </div>
+        <div class="bar-row" data-style="justice">
+          <span class="bar-label"><b>F</b> Justice Ethics</span>
+          <span class="track"><i class="fill"></i></span>
+          <span class="bar-val">0</span>
+        </div>
+          <div class="axis">
+            <span></span>
+            <span class="ticks" id="ticks" aria-hidden="true"></span>
+            <span></span>
+          </div>
+          <p class="axis-note">Times chosen, out of 10.</p>
+        </div>
+      </div>
+
+      <div class="no-js-only">
+        <p class="sub" style="margin-bottom:1rem">Scripts are blocked in this browser, so your counts are listed instead of charted. Your highest count is your dominant perspective.</p>
+        <div class="sum-row">
+          <span class="nm"><b>A</b>&nbsp;&nbsp;Duty Ethics</span>
+          <span class="val"><b class="c-duty"></b> <span class="of">/ 10</span></span>
+        </div>
+        <div class="sum-row">
+          <span class="nm"><b>B</b>&nbsp;&nbsp;Utilitarian Ethics</span>
+          <span class="val"><b class="c-util"></b> <span class="of">/ 10</span></span>
+        </div>
+        <div class="sum-row">
+          <span class="nm"><b>C</b>&nbsp;&nbsp;Virtue Ethics</span>
+          <span class="val"><b class="c-virtue"></b> <span class="of">/ 10</span></span>
+        </div>
+        <div class="sum-row">
+          <span class="nm"><b>D</b>&nbsp;&nbsp;Caring Ethics</span>
+          <span class="val"><b class="c-caring"></b> <span class="of">/ 10</span></span>
+        </div>
+        <div class="sum-row">
+          <span class="nm"><b>E</b>&nbsp;&nbsp;Egoism Ethics</span>
+          <span class="val"><b class="c-egoism"></b> <span class="of">/ 10</span></span>
+        </div>
+        <div class="sum-row">
+          <span class="nm"><b>F</b>&nbsp;&nbsp;Justice Ethics</span>
+          <span class="val"><b class="c-justice"></b> <span class="of">/ 10</span></span>
+        </div>
+      </div>
+
+      <div class="styles">
+        <p class="eyebrow">What each perspective means</p>
+        <div class="style-row" data-style="duty">
+          <p class="style-nm"><span class="dot"></span>Duty Ethics <span class="style-ct js-only"></span></p>
+          <p class="style-d">You follow a set of moral rules and do what is expected of you when facing an ethical dilemma. You focus on fulfilling your moral obligations and doing your duty.</p>
+        </div>
+        <div class="style-row" data-style="util">
+          <p class="style-nm"><span class="dot"></span>Utilitarian Ethics <span class="style-ct js-only"></span></p>
+          <p class="style-d">You try to do what is best for the most people overall when facing an ethical dilemma. You focus on what will result in happiness for the largest number of individuals.</p>
+        </div>
+        <div class="style-row" data-style="virtue">
+          <p class="style-nm"><span class="dot"></span>Virtue Ethics <span class="style-ct js-only"></span></p>
+          <p class="style-d">You pull from who you are (your character) when facing an ethical dilemma. You act out of integrity, and you are faithful to your own principles.</p>
+        </div>
+        <div class="style-row" data-style="caring">
+          <p class="style-nm"><span class="dot"></span>Caring Ethics <span class="style-ct js-only"></span></p>
+          <p class="style-d">You give attention to your relationships when facing an ethical dilemma. You may give special consideration to those with whom you share a personal bond or commitment.</p>
+        </div>
+        <div class="style-row" data-style="egoism">
+          <p class="style-nm"><span class="dot"></span>Egoism Ethics <span class="style-ct js-only"></span></p>
+          <p class="style-d">You do what is best for accomplishing your personal goals and objectives when facing an ethical dilemma. You are not afraid to assert your own interests when resolving problems.</p>
+        </div>
+        <div class="style-row" data-style="justice">
+          <p class="style-nm"><span class="dot"></span>Justice Ethics <span class="style-ct js-only"></span></p>
+          <p class="style-d">You focus on treating others fairly when facing an ethical dilemma. You try to make sure the benefits and burdens of decisions are shared equitably between everyone concerned.</p>
+        </div>
+      </div>
+
+      <div class="reading">
+        <p>If you scored 0 for a category, it means you put lower priority on that ethical approach to guide your decision making when facing ethical dilemmas.</p>
+        <p>All of the ethical perspectives have merit, so there is no &ldquo;best&rdquo; perspective to maintain. Although each approach is presented as a discrete category, it is possible that one category may overlap with another, and possible that your ethical leadership style is not fully captured here.</p>
+      </div>
+    </div>
+
+    <section class="reflect">
+      <h2>Reflection</h2>
+      <p class="sub">Your profile is only the prompt. This question is the assignment &mdash; it is what you turn in.</p>
+      <div class="prompt">
+        <label for="r1">Based on your scores on this assessment, what potential implications might your preferred approach to ethical decision making have for how you make decisions and work with others as a leader, colleague, or team member?</label>
+        <textarea id="r1" placeholder="Point to specific perspectives or situations, and be concrete about where the difference would show."></textarea>
+      </div>
+    </section>
+
+    <!-- ===== EDIT ME: submission instructions ===== -->
+    <section class="submit-card">
+      <h2>Turn this in</h2>
+      <p>Submit your six perspective scores, all 10 choices, and your written reflection.</p>
+
+      <p class="eyebrow" style="margin-bottom:.5rem">Your 10 choices</p>
+      <pre class="resp" id="respBlock">01:<span class="ans a1"></span>   02:<span class="ans a2"></span>   03:<span class="ans a3"></span>   04:<span class="ans a4"></span>   05:<span class="ans a5"></span>
+06:<span class="ans a6"></span>   07:<span class="ans a7"></span>   08:<span class="ans a8"></span>   09:<span class="ans a9"></span>   10:<span class="ans a10"></span></pre>
+
+      <div class="js-only">
+        <ol class="steps">
+          <li>Click <strong>Copy my submission</strong> below.</li>
+          <li>Open the Canvas assignment and choose the <strong>Text Entry</strong> tab.</li>
+          <li>Paste, then click <strong>Submit Assignment</strong>.</li>
+        </ol>
+        <textarea id="submitText" readonly spellcheck="false" aria-label="Your submission text"></textarea>
+        <div class="actions no-print">
+          <button type="button" class="btn-primary" id="copyBtn">Copy my submission</button>
+          <button type="button" class="btn-ghost" id="printBtn">Print / save as PDF</button>
+          <button type="button" class="btn-ghost" id="resetBtn">Start over</button>
+          <span class="hint" id="copyHint"></span>
+        </div>
+      </div>
+
+      <div class="no-js-only">
+        <ol class="steps">
+          <li>Read your perspective counts and your 10 choices from the boxes above.</li>
+          <li>Open the Canvas assignment and choose the <strong>Text Entry</strong> tab.</li>
+          <li>Fill in the template below, then click <strong>Submit Assignment</strong>.</li>
+        </ol>
+        <p class="hint" style="margin:0 0 .7rem">Scripts are blocked, so the one-click copy is unavailable. <strong>Print / save as PDF</strong> (Ctrl&#8239;+&#8239;P or &#8984;&#8239;P) captures everything and can be uploaded as a file instead.</p>
+        <pre class="tmpl">Name:
+Date completed:
+
+TOTAL SCORES (must add up to 10)
+  A. Duty Ethics ......... ___
+  B. Utilitarian Ethics .. ___
+  C. Virtue Ethics ....... ___
+  D. Caring Ethics ....... ___
+  E. Egoism Ethics ....... ___
+  F. Justice Ethics ...... ___
+
+My dominant perspective: ______________________
+
+CHOICES 01-10: __ __ __ __ __ __ __ __ __ __
+
+REFLECTION - Implications of my preferred approach to ethical decision
+making for how I make decisions and work with others:
+</pre>
+      </div>
+    </section>
+    <!-- ===== /EDIT ME ===== -->
+  </section>
+
+  <footer class="colophon">
+    <p>Each perspective&rsquo;s score is the number of times you chose its response. The six scores add up to 10. There is no overall total and no cutoff scores &mdash; what matters is the rank order.</p>
+    <p>Complete this questionnaire individually. You will not be asked to share your individual choices with the class.</p>
+    <p class="cite">These are <strong>sample items</strong> &mdash; an abridged version of a longer instrument. The full questionnaire can be taken at <a href="https://www.leaderdecisionmakingsurvey.com" rel="noopener">www.leaderdecisionmakingsurvey.com</a>. Source: Application&nbsp;11.3, &ldquo;Sample Items From the Ethical Leadership Style Questionnaire,&rdquo; from <cite>Introduction to Leadership</cite>, ch.&nbsp;11, &ldquo;Addressing Ethics in Leadership,&rdquo; pp.&nbsp;313&ndash;318.</p>
+  </footer>
+
+</div>
+
+<div class="tally">
+  <div class="tally-inner">
+    <span><b class="c-answered"></b> of 10 answered</span>
+    <a class="jump" href="#results">Go to my profile &darr;</a>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  document.documentElement.className += " has-js";
+
+  var STYLES = [["A","duty","Duty Ethics"], ["B","util","Utilitarian Ethics"], ["C","virtue","Virtue Ethics"], ["D","caring","Caring Ethics"], ["E","egoism","Egoism Ethics"], ["F","justice","Justice Ethics"]];
+  var NSIT = 10;
+
+  var KEY = "els.v1";
+  var LETTERS = STYLES.map(function (s) { return s[0]; });
+
+  var form     = document.getElementById("survey");
+  var submitTA = document.getElementById("submitText");
+  var copyHint = document.getElementById("copyHint");
+  var nameEl   = document.getElementById("studentName");
+  var dateEl   = document.getElementById("studentDate");
+  var noteEl   = document.getElementById("r1");
+
+  var PROMPT = "Based on your scores on this assessment, what potential implications " +
+    "might your preferred approach to ethical decision making have for how you make " +
+    "decisions and work with others as a leader, colleague, or team member?";
+
+  function readAll() {
+    var out = {};
+    for (var n = 1; n <= NSIT; n++) {
+      var el = form.querySelector('input[name="q' + n + '"]:checked');
+      out[n] = el ? el.value : null;
+    }
+    return out;
+  }
+
+  function counts(raw) {
+    var c = {};
+    STYLES.forEach(function (s) { c[s[1]] = 0; });
+    for (var n = 1; n <= NSIT; n++) {
+      var v = raw[n];
+      if (!v) continue;
+      var idx = LETTERS.indexOf(v);
+      if (idx >= 0) c[STYLES[idx][1]]++;
+    }
+    return c;
+  }
+
+  function answeredCount(raw) {
+    var k = 0;
+    for (var n = 1; n <= NSIT; n++) { if (raw[n]) k++; }
+    return k;
+  }
+
+  /* ---------- chart ---------- */
+
+  var ticks = document.getElementById("ticks");
+  var grid  = document.getElementById("grid");
+  for (var t = 0; t <= NSIT; t += 2) {
+    var pct = t / NSIT * 100;
+    var sp = document.createElement("span");
+    sp.textContent = t;
+    sp.style.left = pct + "%";
+    ticks.appendChild(sp);
+    var g = document.createElement("i");
+    g.style.left = pct + "%";
+    grid.appendChild(g);
+  }
+
+  function topStyles(c) {
+    var max = 0;
+    STYLES.forEach(function (s) { if (c[s[1]] > max) max = c[s[1]]; });
+    if (max === 0) return { max: 0, names: [] };
+    return {
+      max: max,
+      names: STYLES.filter(function (s) { return c[s[1]] === max; })
+                   .map(function (s) { return s[2]; })
+    };
+  }
+
+  function draw(raw) {
+    var c = counts(raw), done = answeredCount(raw) === NSIT;
+    var top = topStyles(c);
+
+    STYLES.forEach(function (s) {
+      var row = document.querySelector('.bar-row[data-style="' + s[1] + '"]');
+      var v = c[s[1]];
+      row.querySelector(".fill").style.width = (v / NSIT * 100) + "%";
+      row.querySelector(".bar-val").textContent = v;
+
+      var sr = document.querySelector('.style-row[data-style="' + s[1] + '"]');
+      sr.className = "style-row" + (done && top.max > 0 && c[s[1]] === top.max ? " top" : "");
+      sr.querySelector(".style-ct").textContent = v + " of " + NSIT;
+    });
+
+    var hText = document.getElementById("headlineText");
+    var hNote = document.getElementById("headlineNote");
+    if (!done) {
+      hText.textContent = "—";
+      hNote.textContent = "Answer all 10 situations to see your result. " +
+        answeredCount(raw) + " of " + NSIT + " done.";
+    } else if (top.names.length === 1) {
+      hText.textContent = top.names[0];
+      hNote.textContent = "You chose this perspective " + top.max +
+        (top.max === 1 ? " time" : " times") + " out of " + NSIT + ".";
+    } else {
+      hText.textContent = top.names.slice(0, -1).join(", ") + " and " +
+        top.names[top.names.length - 1];
+      hNote.textContent = "Tied at " + top.max +
+        (top.max === 1 ? " choice" : " choices") + " each — you draw on these equally.";
+    }
+  }
+
+  /* ---------- persistence ---------- */
+
+  function save() {
+    try {
+      localStorage.setItem(KEY, JSON.stringify({
+        answers: readAll(), note: noteEl.value, name: nameEl.value, date: dateEl.value
+      }));
+    } catch (e) { /* storage blocked */ }
+  }
+
+  function applyState(d) {
+    if (!d) return;
+    if (d.answers) {
+      Object.keys(d.answers).forEach(function (n) {
+        var v = d.answers[n];
+        if (!v) return;
+        var el = document.getElementById("q" + n + v);
+        if (el) el.checked = true;
+      });
+    }
+    if (typeof d.note === "string") noteEl.value = d.note;
+    if (typeof d.name === "string") nameEl.value = d.name;
+    if (typeof d.date === "string") dateEl.value = d.date;
+  }
+
+  function restore() {
+    var raw = null;
+    try { raw = localStorage.getItem(KEY); } catch (e) { return; }
+    if (!raw) return;
+    try { applyState(JSON.parse(raw)); } catch (e) { /* corrupt */ }
+  }
+
+  /* ---------- submission ---------- */
+
+  function wrap(s, width) {
+    var out = [];
+    s.split("\n").forEach(function (para) {
+      if (!para.trim()) { out.push(""); return; }
+      var line = "";
+      para.split(/\s+/).forEach(function (w) {
+        if (!w) return;
+        if (line && (line + " " + w).length > width) { out.push(line); line = w; }
+        else { line = line ? line + " " + w : w; }
+      });
+      if (line) out.push(line);
+    });
+    return out.join("\n");
+  }
+
+  function pad(s, n) { while (s.length < n) { s += "."; } return s; }
+
+  function buildSubmission() {
+    var raw = readAll(), c = counts(raw), done = answeredCount(raw) === NSIT;
+    var top = topStyles(c);
+
+    var L = [];
+    L.push("ETHICAL LEADERSHIP STYLE QUESTIONNAIRE");
+    L.push("======================================");
+    L.push("Name: " + (nameEl.value.trim() || "[your name]"));
+    L.push("Date completed: " + (dateEl.value.trim() || "[date]"));
+    L.push("");
+    if (!done) {
+      L.push("INCOMPLETE — " + (NSIT - answeredCount(raw)) + " of 10 situations unanswered.");
+      L.push("");
+    }
+    L.push("TOTAL SCORES (out of 10)");
+    L.push("--------------------------------------");
+    STYLES.forEach(function (s) {
+      L.push("  " + s[0] + ". " + pad(s[2] + " ", 24) + " " + c[s[1]]);
+    });
+    L.push("");
+    L.push("  Dominant perspective: " +
+           (done && top.names.length ? top.names.join(" and ") +
+            " (" + top.max + " of " + NSIT + ")" : "—"));
+    L.push("");
+    L.push("CHOICES BY SITUATION");
+    L.push("--------------------------------------");
+    var cells = [];
+    for (var n = 1; n <= NSIT; n++) {
+      cells.push((n < 10 ? "0" : "") + n + ":" + (raw[n] || "–"));
+    }
+    L.push("  " + cells.slice(0, 5).join("   "));
+    L.push("  " + cells.slice(5).join("   "));
+    L.push("");
+    L.push("REFLECTION");
+    L.push("--------------------------------------");
+    L.push("");
+    L.push(wrap(PROMPT, 60));
+    L.push("");
+    var a = noteEl.value.trim();
+    L.push(a ? wrap(a, 60) : "[not answered]");
+    return L.join("\n");
+  }
+
+  function update() {
+    var raw = readAll();
+    draw(raw);
+    submitTA.value = buildSubmission();
+  }
+
+  /* ---------- copy ---------- */
+
+  function flash(msg, ok) {
+    copyHint.textContent = msg;
+    copyHint.className = "hint " + (ok ? "ok" : "warn");
+    window.setTimeout(function () { copyHint.textContent = ""; copyHint.className = "hint"; }, 4000);
+  }
+
+  function legacyCopy() {
+    submitTA.removeAttribute("readonly");
+    submitTA.focus();
+    submitTA.select();
+    var ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+    submitTA.setAttribute("readonly", "readonly");
+    return ok;
+  }
+
+  document.getElementById("copyBtn").addEventListener("click", function () {
+    update();
+    var raw = readAll();
+    if (answeredCount(raw) !== NSIT) {
+      var missing = [];
+      for (var n = 1; n <= NSIT; n++) { if (!raw[n]) missing.push(n); }
+      missing.forEach(function (m) { document.getElementById("item-" + m).className = "item flag"; });
+      flash(missing.length + " situation" + (missing.length > 1 ? "s are" : " is") +
+            " still unanswered — highlighted above.", false);
+      document.getElementById("item-" + missing[0]).scrollIntoView({ behavior: "smooth", block: "center" });
+      return;
+    }
+    var text = submitTA.value;
+    var done = function () { flash("Copied — now paste it into Canvas.", true); };
+    var fail = function () {
+      if (legacyCopy()) done();
+      else flash("Couldn’t copy automatically — select the text above and copy it.", false);
+    };
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(done, fail);
+    } else { fail(); }
+  });
+
+  /* ---------- events ---------- */
+
+  form.addEventListener("change", function (e) {
+    var t = e.target;
+    if (t && t.name && t.name.charAt(0) === "q") {
+      var row = t.closest ? t.closest(".item") : null;
+      if (row) row.className = "item";
+    }
+    update();
+    save();
+  });
+
+  [noteEl, nameEl, dateEl].forEach(function (el) {
+    el.addEventListener("input", function () { update(); save(); });
+  });
+
+  document.getElementById("printBtn").addEventListener("click", function () { window.print(); });
+
+  document.getElementById("resetBtn").addEventListener("click", function () {
+    if (!window.confirm("Clear all 10 choices and your written reflection? This cannot be undone.")) return;
+    form.reset();
+    noteEl.value = "";
+    try { localStorage.removeItem(KEY); } catch (e) { /* storage blocked */ }
+    var rows = document.querySelectorAll(".item");
+    for (var i = 0; i < rows.length; i++) { rows[i].className = "item"; }
+    update();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  /* ---------- boot ---------- */
+
+  function start(state) {
+    if (state && state.answers) applyState(state);
+    else restore();
+    if (!dateEl.value) {
+      try {
+        dateEl.value = new Date().toLocaleDateString(undefined,
+          { year: "numeric", month: "long", day: "numeric" });
+      } catch (e) { /* locale unavailable */ }
+    }
+    update();
+  }
+
+  var hot = window.claude && window.claude.hot;
+  if (hot && hot.snapshot) {
+    hot.snapshot(function () {
+      return { answers: readAll(), note: noteEl.value, name: nameEl.value, date: dateEl.value };
+    });
+  }
+  if (hot && hot.ready) hot.ready(start);
+  else start((hot && hot.data) || null);
+})();
+</script>
+</body>
+</html>
