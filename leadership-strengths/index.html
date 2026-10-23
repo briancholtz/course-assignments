@@ -1,0 +1,1625 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Leadership Strengths Questionnaire</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600&display=swap">
+
+<style>
+  :root {
+    --paper:      #f1f4f2;
+    --surface:    #ffffff;
+    --surface-2:  #e9efec;
+    --rule:       #d2dcd7;
+    --rule-soft:  #e2e9e5;
+    --ink:        #15211e;
+    --ink-2:      #3d4f49;
+    --muted:      #6b7d77;
+    --accent:     #14524b;
+    --accent-2:   #1c6f66;
+    --accent-ink: #ffffff;
+    --gold:       #9c7526;
+    --gold-soft:  #f3e7cb;
+    --grid:       #dde5e1;
+    --shadow:     0 1px 2px rgba(21,33,30,.06), 0 8px 24px -14px rgba(21,33,30,.28);
+    --focus:      #1c6f66;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:#0f1614; --surface:#172220; --surface-2:#1e2b28; --rule:#2c3b37;
+      --rule-soft:#24322e; --ink:#e8efeb; --ink-2:#bfcdc8; --muted:#8ba098;
+      --accent:#5fb3a5; --accent-2:#7ac8ba; --accent-ink:#0c1917;
+      --gold:#d8ab5c; --gold-soft:#3a3018; --grid:#2a3a36;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px -16px rgba(0,0,0,.8);
+      --focus:#7ac8ba;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:#0f1614; --surface:#172220; --surface-2:#1e2b28; --rule:#2c3b37;
+    --rule-soft:#24322e; --ink:#e8efeb; --ink-2:#bfcdc8; --muted:#8ba098;
+    --accent:#5fb3a5; --accent-2:#7ac8ba; --accent-ink:#0c1917;
+    --gold:#d8ab5c; --gold-soft:#3a3018; --grid:#2a3a36;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px -16px rgba(0,0,0,.8);
+    --focus:#7ac8ba;
+  }
+
+  * { box-sizing: border-box; }
+  html { color-scheme: light dark; }
+
+  /* Strength totals computed in CSS, so they survive script stripping. */
+  body { counter-reset: c_impl 0 c_innov 0 c_encou 0 c_analy 0 c_media 0 answered 0; }
+  #q1v1:checked { counter-increment: c_impl 1 answered 1; }
+  #q1v2:checked { counter-increment: c_impl 2 answered 1; }
+  #q1v3:checked { counter-increment: c_impl 3 answered 1; }
+  #q1v4:checked { counter-increment: c_impl 4 answered 1; }
+  #q1v5:checked { counter-increment: c_impl 5 answered 1; }
+  #q2v1:checked { counter-increment: c_innov 1 answered 1; }
+  #q2v2:checked { counter-increment: c_innov 2 answered 1; }
+  #q2v3:checked { counter-increment: c_innov 3 answered 1; }
+  #q2v4:checked { counter-increment: c_innov 4 answered 1; }
+  #q2v5:checked { counter-increment: c_innov 5 answered 1; }
+  #q3v1:checked { counter-increment: c_encou 1 answered 1; }
+  #q3v2:checked { counter-increment: c_encou 2 answered 1; }
+  #q3v3:checked { counter-increment: c_encou 3 answered 1; }
+  #q3v4:checked { counter-increment: c_encou 4 answered 1; }
+  #q3v5:checked { counter-increment: c_encou 5 answered 1; }
+  #q4v1:checked { counter-increment: c_analy 1 answered 1; }
+  #q4v2:checked { counter-increment: c_analy 2 answered 1; }
+  #q4v3:checked { counter-increment: c_analy 3 answered 1; }
+  #q4v4:checked { counter-increment: c_analy 4 answered 1; }
+  #q4v5:checked { counter-increment: c_analy 5 answered 1; }
+  #q5v1:checked { counter-increment: c_media 1 answered 1; }
+  #q5v2:checked { counter-increment: c_media 2 answered 1; }
+  #q5v3:checked { counter-increment: c_media 3 answered 1; }
+  #q5v4:checked { counter-increment: c_media 4 answered 1; }
+  #q5v5:checked { counter-increment: c_media 5 answered 1; }
+  #q6v1:checked { counter-increment: c_impl 1 answered 1; }
+  #q6v2:checked { counter-increment: c_impl 2 answered 1; }
+  #q6v3:checked { counter-increment: c_impl 3 answered 1; }
+  #q6v4:checked { counter-increment: c_impl 4 answered 1; }
+  #q6v5:checked { counter-increment: c_impl 5 answered 1; }
+  #q7v1:checked { counter-increment: c_innov 1 answered 1; }
+  #q7v2:checked { counter-increment: c_innov 2 answered 1; }
+  #q7v3:checked { counter-increment: c_innov 3 answered 1; }
+  #q7v4:checked { counter-increment: c_innov 4 answered 1; }
+  #q7v5:checked { counter-increment: c_innov 5 answered 1; }
+  #q8v1:checked { counter-increment: c_encou 1 answered 1; }
+  #q8v2:checked { counter-increment: c_encou 2 answered 1; }
+  #q8v3:checked { counter-increment: c_encou 3 answered 1; }
+  #q8v4:checked { counter-increment: c_encou 4 answered 1; }
+  #q8v5:checked { counter-increment: c_encou 5 answered 1; }
+  #q9v1:checked { counter-increment: c_analy 1 answered 1; }
+  #q9v2:checked { counter-increment: c_analy 2 answered 1; }
+  #q9v3:checked { counter-increment: c_analy 3 answered 1; }
+  #q9v4:checked { counter-increment: c_analy 4 answered 1; }
+  #q9v5:checked { counter-increment: c_analy 5 answered 1; }
+  #q10v1:checked { counter-increment: c_media 1 answered 1; }
+  #q10v2:checked { counter-increment: c_media 2 answered 1; }
+  #q10v3:checked { counter-increment: c_media 3 answered 1; }
+  #q10v4:checked { counter-increment: c_media 4 answered 1; }
+  #q10v5:checked { counter-increment: c_media 5 answered 1; }
+  #q11v1:checked { counter-increment: c_impl 1 answered 1; }
+  #q11v2:checked { counter-increment: c_impl 2 answered 1; }
+  #q11v3:checked { counter-increment: c_impl 3 answered 1; }
+  #q11v4:checked { counter-increment: c_impl 4 answered 1; }
+  #q11v5:checked { counter-increment: c_impl 5 answered 1; }
+  #q12v1:checked { counter-increment: c_innov 1 answered 1; }
+  #q12v2:checked { counter-increment: c_innov 2 answered 1; }
+  #q12v3:checked { counter-increment: c_innov 3 answered 1; }
+  #q12v4:checked { counter-increment: c_innov 4 answered 1; }
+  #q12v5:checked { counter-increment: c_innov 5 answered 1; }
+  #q13v1:checked { counter-increment: c_encou 1 answered 1; }
+  #q13v2:checked { counter-increment: c_encou 2 answered 1; }
+  #q13v3:checked { counter-increment: c_encou 3 answered 1; }
+  #q13v4:checked { counter-increment: c_encou 4 answered 1; }
+  #q13v5:checked { counter-increment: c_encou 5 answered 1; }
+  #q14v1:checked { counter-increment: c_analy 1 answered 1; }
+  #q14v2:checked { counter-increment: c_analy 2 answered 1; }
+  #q14v3:checked { counter-increment: c_analy 3 answered 1; }
+  #q14v4:checked { counter-increment: c_analy 4 answered 1; }
+  #q14v5:checked { counter-increment: c_analy 5 answered 1; }
+  #q15v1:checked { counter-increment: c_media 1 answered 1; }
+  #q15v2:checked { counter-increment: c_media 2 answered 1; }
+  #q15v3:checked { counter-increment: c_media 3 answered 1; }
+  #q15v4:checked { counter-increment: c_media 4 answered 1; }
+  #q15v5:checked { counter-increment: c_media 5 answered 1; }
+  #q16v1:checked { counter-increment: c_impl 1 answered 1; }
+  #q16v2:checked { counter-increment: c_impl 2 answered 1; }
+  #q16v3:checked { counter-increment: c_impl 3 answered 1; }
+  #q16v4:checked { counter-increment: c_impl 4 answered 1; }
+  #q16v5:checked { counter-increment: c_impl 5 answered 1; }
+  #q17v1:checked { counter-increment: c_innov 1 answered 1; }
+  #q17v2:checked { counter-increment: c_innov 2 answered 1; }
+  #q17v3:checked { counter-increment: c_innov 3 answered 1; }
+  #q17v4:checked { counter-increment: c_innov 4 answered 1; }
+  #q17v5:checked { counter-increment: c_innov 5 answered 1; }
+  #q18v1:checked { counter-increment: c_encou 1 answered 1; }
+  #q18v2:checked { counter-increment: c_encou 2 answered 1; }
+  #q18v3:checked { counter-increment: c_encou 3 answered 1; }
+  #q18v4:checked { counter-increment: c_encou 4 answered 1; }
+  #q18v5:checked { counter-increment: c_encou 5 answered 1; }
+  #q19v1:checked { counter-increment: c_analy 1 answered 1; }
+  #q19v2:checked { counter-increment: c_analy 2 answered 1; }
+  #q19v3:checked { counter-increment: c_analy 3 answered 1; }
+  #q19v4:checked { counter-increment: c_analy 4 answered 1; }
+  #q19v5:checked { counter-increment: c_analy 5 answered 1; }
+  #q20v1:checked { counter-increment: c_media 1 answered 1; }
+  #q20v2:checked { counter-increment: c_media 2 answered 1; }
+  #q20v3:checked { counter-increment: c_media 3 answered 1; }
+  #q20v4:checked { counter-increment: c_media 4 answered 1; }
+  #q20v5:checked { counter-increment: c_media 5 answered 1; }
+  #q21v1:checked { counter-increment: c_impl 1 answered 1; }
+  #q21v2:checked { counter-increment: c_impl 2 answered 1; }
+  #q21v3:checked { counter-increment: c_impl 3 answered 1; }
+  #q21v4:checked { counter-increment: c_impl 4 answered 1; }
+  #q21v5:checked { counter-increment: c_impl 5 answered 1; }
+  #q22v1:checked { counter-increment: c_innov 1 answered 1; }
+  #q22v2:checked { counter-increment: c_innov 2 answered 1; }
+  #q22v3:checked { counter-increment: c_innov 3 answered 1; }
+  #q22v4:checked { counter-increment: c_innov 4 answered 1; }
+  #q22v5:checked { counter-increment: c_innov 5 answered 1; }
+  #q23v1:checked { counter-increment: c_encou 1 answered 1; }
+  #q23v2:checked { counter-increment: c_encou 2 answered 1; }
+  #q23v3:checked { counter-increment: c_encou 3 answered 1; }
+  #q23v4:checked { counter-increment: c_encou 4 answered 1; }
+  #q23v5:checked { counter-increment: c_encou 5 answered 1; }
+  #q24v1:checked { counter-increment: c_analy 1 answered 1; }
+  #q24v2:checked { counter-increment: c_analy 2 answered 1; }
+  #q24v3:checked { counter-increment: c_analy 3 answered 1; }
+  #q24v4:checked { counter-increment: c_analy 4 answered 1; }
+  #q24v5:checked { counter-increment: c_analy 5 answered 1; }
+  #q25v1:checked { counter-increment: c_media 1 answered 1; }
+  #q25v2:checked { counter-increment: c_media 2 answered 1; }
+  #q25v3:checked { counter-increment: c_media 3 answered 1; }
+  #q25v4:checked { counter-increment: c_media 4 answered 1; }
+  #q25v5:checked { counter-increment: c_media 5 answered 1; }
+  #q26v1:checked { counter-increment: c_impl 1 answered 1; }
+  #q26v2:checked { counter-increment: c_impl 2 answered 1; }
+  #q26v3:checked { counter-increment: c_impl 3 answered 1; }
+  #q26v4:checked { counter-increment: c_impl 4 answered 1; }
+  #q26v5:checked { counter-increment: c_impl 5 answered 1; }
+  #q27v1:checked { counter-increment: c_innov 1 answered 1; }
+  #q27v2:checked { counter-increment: c_innov 2 answered 1; }
+  #q27v3:checked { counter-increment: c_innov 3 answered 1; }
+  #q27v4:checked { counter-increment: c_innov 4 answered 1; }
+  #q27v5:checked { counter-increment: c_innov 5 answered 1; }
+  #q28v1:checked { counter-increment: c_encou 1 answered 1; }
+  #q28v2:checked { counter-increment: c_encou 2 answered 1; }
+  #q28v3:checked { counter-increment: c_encou 3 answered 1; }
+  #q28v4:checked { counter-increment: c_encou 4 answered 1; }
+  #q28v5:checked { counter-increment: c_encou 5 answered 1; }
+  #q29v1:checked { counter-increment: c_analy 1 answered 1; }
+  #q29v2:checked { counter-increment: c_analy 2 answered 1; }
+  #q29v3:checked { counter-increment: c_analy 3 answered 1; }
+  #q29v4:checked { counter-increment: c_analy 4 answered 1; }
+  #q29v5:checked { counter-increment: c_analy 5 answered 1; }
+  #q30v1:checked { counter-increment: c_media 1 answered 1; }
+  #q30v2:checked { counter-increment: c_media 2 answered 1; }
+  #q30v3:checked { counter-increment: c_media 3 answered 1; }
+  #q30v4:checked { counter-increment: c_media 4 answered 1; }
+  #q30v5:checked { counter-increment: c_media 5 answered 1; }
+  .c-impl::after  { content: counter(c_impl); }
+  .c-innov::after { content: counter(c_innov); }
+  .c-encou::after { content: counter(c_encou); }
+  .c-analy::after { content: counter(c_analy); }
+  .c-media::after { content: counter(c_media); }
+  .c-answered::after { content: counter(answered); }
+
+  /* Per-item readout, also script-free. */
+  .resp .ans::after { content: "\2013"; color: var(--muted); }
+  body:has(#q1v1:checked) .resp .a1::after { content: "1"; color: var(--accent); }
+  body:has(#q1v2:checked) .resp .a1::after { content: "2"; color: var(--accent); }
+  body:has(#q1v3:checked) .resp .a1::after { content: "3"; color: var(--accent); }
+  body:has(#q1v4:checked) .resp .a1::after { content: "4"; color: var(--accent); }
+  body:has(#q1v5:checked) .resp .a1::after { content: "5"; color: var(--accent); }
+  body:has(#q2v1:checked) .resp .a2::after { content: "1"; color: var(--accent); }
+  body:has(#q2v2:checked) .resp .a2::after { content: "2"; color: var(--accent); }
+  body:has(#q2v3:checked) .resp .a2::after { content: "3"; color: var(--accent); }
+  body:has(#q2v4:checked) .resp .a2::after { content: "4"; color: var(--accent); }
+  body:has(#q2v5:checked) .resp .a2::after { content: "5"; color: var(--accent); }
+  body:has(#q3v1:checked) .resp .a3::after { content: "1"; color: var(--accent); }
+  body:has(#q3v2:checked) .resp .a3::after { content: "2"; color: var(--accent); }
+  body:has(#q3v3:checked) .resp .a3::after { content: "3"; color: var(--accent); }
+  body:has(#q3v4:checked) .resp .a3::after { content: "4"; color: var(--accent); }
+  body:has(#q3v5:checked) .resp .a3::after { content: "5"; color: var(--accent); }
+  body:has(#q4v1:checked) .resp .a4::after { content: "1"; color: var(--accent); }
+  body:has(#q4v2:checked) .resp .a4::after { content: "2"; color: var(--accent); }
+  body:has(#q4v3:checked) .resp .a4::after { content: "3"; color: var(--accent); }
+  body:has(#q4v4:checked) .resp .a4::after { content: "4"; color: var(--accent); }
+  body:has(#q4v5:checked) .resp .a4::after { content: "5"; color: var(--accent); }
+  body:has(#q5v1:checked) .resp .a5::after { content: "1"; color: var(--accent); }
+  body:has(#q5v2:checked) .resp .a5::after { content: "2"; color: var(--accent); }
+  body:has(#q5v3:checked) .resp .a5::after { content: "3"; color: var(--accent); }
+  body:has(#q5v4:checked) .resp .a5::after { content: "4"; color: var(--accent); }
+  body:has(#q5v5:checked) .resp .a5::after { content: "5"; color: var(--accent); }
+  body:has(#q6v1:checked) .resp .a6::after { content: "1"; color: var(--accent); }
+  body:has(#q6v2:checked) .resp .a6::after { content: "2"; color: var(--accent); }
+  body:has(#q6v3:checked) .resp .a6::after { content: "3"; color: var(--accent); }
+  body:has(#q6v4:checked) .resp .a6::after { content: "4"; color: var(--accent); }
+  body:has(#q6v5:checked) .resp .a6::after { content: "5"; color: var(--accent); }
+  body:has(#q7v1:checked) .resp .a7::after { content: "1"; color: var(--accent); }
+  body:has(#q7v2:checked) .resp .a7::after { content: "2"; color: var(--accent); }
+  body:has(#q7v3:checked) .resp .a7::after { content: "3"; color: var(--accent); }
+  body:has(#q7v4:checked) .resp .a7::after { content: "4"; color: var(--accent); }
+  body:has(#q7v5:checked) .resp .a7::after { content: "5"; color: var(--accent); }
+  body:has(#q8v1:checked) .resp .a8::after { content: "1"; color: var(--accent); }
+  body:has(#q8v2:checked) .resp .a8::after { content: "2"; color: var(--accent); }
+  body:has(#q8v3:checked) .resp .a8::after { content: "3"; color: var(--accent); }
+  body:has(#q8v4:checked) .resp .a8::after { content: "4"; color: var(--accent); }
+  body:has(#q8v5:checked) .resp .a8::after { content: "5"; color: var(--accent); }
+  body:has(#q9v1:checked) .resp .a9::after { content: "1"; color: var(--accent); }
+  body:has(#q9v2:checked) .resp .a9::after { content: "2"; color: var(--accent); }
+  body:has(#q9v3:checked) .resp .a9::after { content: "3"; color: var(--accent); }
+  body:has(#q9v4:checked) .resp .a9::after { content: "4"; color: var(--accent); }
+  body:has(#q9v5:checked) .resp .a9::after { content: "5"; color: var(--accent); }
+  body:has(#q10v1:checked) .resp .a10::after { content: "1"; color: var(--accent); }
+  body:has(#q10v2:checked) .resp .a10::after { content: "2"; color: var(--accent); }
+  body:has(#q10v3:checked) .resp .a10::after { content: "3"; color: var(--accent); }
+  body:has(#q10v4:checked) .resp .a10::after { content: "4"; color: var(--accent); }
+  body:has(#q10v5:checked) .resp .a10::after { content: "5"; color: var(--accent); }
+  body:has(#q11v1:checked) .resp .a11::after { content: "1"; color: var(--accent); }
+  body:has(#q11v2:checked) .resp .a11::after { content: "2"; color: var(--accent); }
+  body:has(#q11v3:checked) .resp .a11::after { content: "3"; color: var(--accent); }
+  body:has(#q11v4:checked) .resp .a11::after { content: "4"; color: var(--accent); }
+  body:has(#q11v5:checked) .resp .a11::after { content: "5"; color: var(--accent); }
+  body:has(#q12v1:checked) .resp .a12::after { content: "1"; color: var(--accent); }
+  body:has(#q12v2:checked) .resp .a12::after { content: "2"; color: var(--accent); }
+  body:has(#q12v3:checked) .resp .a12::after { content: "3"; color: var(--accent); }
+  body:has(#q12v4:checked) .resp .a12::after { content: "4"; color: var(--accent); }
+  body:has(#q12v5:checked) .resp .a12::after { content: "5"; color: var(--accent); }
+  body:has(#q13v1:checked) .resp .a13::after { content: "1"; color: var(--accent); }
+  body:has(#q13v2:checked) .resp .a13::after { content: "2"; color: var(--accent); }
+  body:has(#q13v3:checked) .resp .a13::after { content: "3"; color: var(--accent); }
+  body:has(#q13v4:checked) .resp .a13::after { content: "4"; color: var(--accent); }
+  body:has(#q13v5:checked) .resp .a13::after { content: "5"; color: var(--accent); }
+  body:has(#q14v1:checked) .resp .a14::after { content: "1"; color: var(--accent); }
+  body:has(#q14v2:checked) .resp .a14::after { content: "2"; color: var(--accent); }
+  body:has(#q14v3:checked) .resp .a14::after { content: "3"; color: var(--accent); }
+  body:has(#q14v4:checked) .resp .a14::after { content: "4"; color: var(--accent); }
+  body:has(#q14v5:checked) .resp .a14::after { content: "5"; color: var(--accent); }
+  body:has(#q15v1:checked) .resp .a15::after { content: "1"; color: var(--accent); }
+  body:has(#q15v2:checked) .resp .a15::after { content: "2"; color: var(--accent); }
+  body:has(#q15v3:checked) .resp .a15::after { content: "3"; color: var(--accent); }
+  body:has(#q15v4:checked) .resp .a15::after { content: "4"; color: var(--accent); }
+  body:has(#q15v5:checked) .resp .a15::after { content: "5"; color: var(--accent); }
+  body:has(#q16v1:checked) .resp .a16::after { content: "1"; color: var(--accent); }
+  body:has(#q16v2:checked) .resp .a16::after { content: "2"; color: var(--accent); }
+  body:has(#q16v3:checked) .resp .a16::after { content: "3"; color: var(--accent); }
+  body:has(#q16v4:checked) .resp .a16::after { content: "4"; color: var(--accent); }
+  body:has(#q16v5:checked) .resp .a16::after { content: "5"; color: var(--accent); }
+  body:has(#q17v1:checked) .resp .a17::after { content: "1"; color: var(--accent); }
+  body:has(#q17v2:checked) .resp .a17::after { content: "2"; color: var(--accent); }
+  body:has(#q17v3:checked) .resp .a17::after { content: "3"; color: var(--accent); }
+  body:has(#q17v4:checked) .resp .a17::after { content: "4"; color: var(--accent); }
+  body:has(#q17v5:checked) .resp .a17::after { content: "5"; color: var(--accent); }
+  body:has(#q18v1:checked) .resp .a18::after { content: "1"; color: var(--accent); }
+  body:has(#q18v2:checked) .resp .a18::after { content: "2"; color: var(--accent); }
+  body:has(#q18v3:checked) .resp .a18::after { content: "3"; color: var(--accent); }
+  body:has(#q18v4:checked) .resp .a18::after { content: "4"; color: var(--accent); }
+  body:has(#q18v5:checked) .resp .a18::after { content: "5"; color: var(--accent); }
+  body:has(#q19v1:checked) .resp .a19::after { content: "1"; color: var(--accent); }
+  body:has(#q19v2:checked) .resp .a19::after { content: "2"; color: var(--accent); }
+  body:has(#q19v3:checked) .resp .a19::after { content: "3"; color: var(--accent); }
+  body:has(#q19v4:checked) .resp .a19::after { content: "4"; color: var(--accent); }
+  body:has(#q19v5:checked) .resp .a19::after { content: "5"; color: var(--accent); }
+  body:has(#q20v1:checked) .resp .a20::after { content: "1"; color: var(--accent); }
+  body:has(#q20v2:checked) .resp .a20::after { content: "2"; color: var(--accent); }
+  body:has(#q20v3:checked) .resp .a20::after { content: "3"; color: var(--accent); }
+  body:has(#q20v4:checked) .resp .a20::after { content: "4"; color: var(--accent); }
+  body:has(#q20v5:checked) .resp .a20::after { content: "5"; color: var(--accent); }
+  body:has(#q21v1:checked) .resp .a21::after { content: "1"; color: var(--accent); }
+  body:has(#q21v2:checked) .resp .a21::after { content: "2"; color: var(--accent); }
+  body:has(#q21v3:checked) .resp .a21::after { content: "3"; color: var(--accent); }
+  body:has(#q21v4:checked) .resp .a21::after { content: "4"; color: var(--accent); }
+  body:has(#q21v5:checked) .resp .a21::after { content: "5"; color: var(--accent); }
+  body:has(#q22v1:checked) .resp .a22::after { content: "1"; color: var(--accent); }
+  body:has(#q22v2:checked) .resp .a22::after { content: "2"; color: var(--accent); }
+  body:has(#q22v3:checked) .resp .a22::after { content: "3"; color: var(--accent); }
+  body:has(#q22v4:checked) .resp .a22::after { content: "4"; color: var(--accent); }
+  body:has(#q22v5:checked) .resp .a22::after { content: "5"; color: var(--accent); }
+  body:has(#q23v1:checked) .resp .a23::after { content: "1"; color: var(--accent); }
+  body:has(#q23v2:checked) .resp .a23::after { content: "2"; color: var(--accent); }
+  body:has(#q23v3:checked) .resp .a23::after { content: "3"; color: var(--accent); }
+  body:has(#q23v4:checked) .resp .a23::after { content: "4"; color: var(--accent); }
+  body:has(#q23v5:checked) .resp .a23::after { content: "5"; color: var(--accent); }
+  body:has(#q24v1:checked) .resp .a24::after { content: "1"; color: var(--accent); }
+  body:has(#q24v2:checked) .resp .a24::after { content: "2"; color: var(--accent); }
+  body:has(#q24v3:checked) .resp .a24::after { content: "3"; color: var(--accent); }
+  body:has(#q24v4:checked) .resp .a24::after { content: "4"; color: var(--accent); }
+  body:has(#q24v5:checked) .resp .a24::after { content: "5"; color: var(--accent); }
+  body:has(#q25v1:checked) .resp .a25::after { content: "1"; color: var(--accent); }
+  body:has(#q25v2:checked) .resp .a25::after { content: "2"; color: var(--accent); }
+  body:has(#q25v3:checked) .resp .a25::after { content: "3"; color: var(--accent); }
+  body:has(#q25v4:checked) .resp .a25::after { content: "4"; color: var(--accent); }
+  body:has(#q25v5:checked) .resp .a25::after { content: "5"; color: var(--accent); }
+  body:has(#q26v1:checked) .resp .a26::after { content: "1"; color: var(--accent); }
+  body:has(#q26v2:checked) .resp .a26::after { content: "2"; color: var(--accent); }
+  body:has(#q26v3:checked) .resp .a26::after { content: "3"; color: var(--accent); }
+  body:has(#q26v4:checked) .resp .a26::after { content: "4"; color: var(--accent); }
+  body:has(#q26v5:checked) .resp .a26::after { content: "5"; color: var(--accent); }
+  body:has(#q27v1:checked) .resp .a27::after { content: "1"; color: var(--accent); }
+  body:has(#q27v2:checked) .resp .a27::after { content: "2"; color: var(--accent); }
+  body:has(#q27v3:checked) .resp .a27::after { content: "3"; color: var(--accent); }
+  body:has(#q27v4:checked) .resp .a27::after { content: "4"; color: var(--accent); }
+  body:has(#q27v5:checked) .resp .a27::after { content: "5"; color: var(--accent); }
+  body:has(#q28v1:checked) .resp .a28::after { content: "1"; color: var(--accent); }
+  body:has(#q28v2:checked) .resp .a28::after { content: "2"; color: var(--accent); }
+  body:has(#q28v3:checked) .resp .a28::after { content: "3"; color: var(--accent); }
+  body:has(#q28v4:checked) .resp .a28::after { content: "4"; color: var(--accent); }
+  body:has(#q28v5:checked) .resp .a28::after { content: "5"; color: var(--accent); }
+  body:has(#q29v1:checked) .resp .a29::after { content: "1"; color: var(--accent); }
+  body:has(#q29v2:checked) .resp .a29::after { content: "2"; color: var(--accent); }
+  body:has(#q29v3:checked) .resp .a29::after { content: "3"; color: var(--accent); }
+  body:has(#q29v4:checked) .resp .a29::after { content: "4"; color: var(--accent); }
+  body:has(#q29v5:checked) .resp .a29::after { content: "5"; color: var(--accent); }
+  body:has(#q30v1:checked) .resp .a30::after { content: "1"; color: var(--accent); }
+  body:has(#q30v2:checked) .resp .a30::after { content: "2"; color: var(--accent); }
+  body:has(#q30v3:checked) .resp .a30::after { content: "3"; color: var(--accent); }
+  body:has(#q30v4:checked) .resp .a30::after { content: "4"; color: var(--accent); }
+  body:has(#q30v5:checked) .resp .a30::after { content: "5"; color: var(--accent); }
+
+  .js-only { display: none; }
+  html.has-js .js-only { display: revert; }
+  html.has-js .no-js-only { display: none; }
+
+  body {
+    margin: 0; padding-top: env(safe-area-inset-top, 0px);
+    background: var(--paper); color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+
+  .wrap { max-width: 50rem; margin: 0 auto; padding-inline: 20px; padding-block: 0 7rem; }
+
+  h1, h2, h3 {
+    font-family: Newsreader, Georgia, "Times New Roman", serif;
+    font-weight: 600; text-wrap: balance; margin: 0; line-height: 1.15;
+  }
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .72rem;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0;
+  }
+
+  header.masthead { padding-block: 3rem 2rem; border-bottom: 2px solid var(--ink); }
+  header.masthead h1 { font-size: clamp(2rem, 5.6vw, 2.9rem); letter-spacing: -.015em; margin-block: .5rem .6rem; }
+  header.masthead .standfirst {
+    font-family: Newsreader, Georgia, serif; font-size: 1.18rem; line-height: 1.5;
+    color: var(--ink-2); max-width: 42ch; margin: 0;
+  }
+  .meta { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin-top: 1.5rem; font-size: .82rem; color: var(--muted); }
+  .meta span { display: flex; align-items: baseline; gap: .4rem; }
+  .meta b { font-family: "IBM Plex Mono", monospace; font-weight: 500; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+
+  .brief { padding-block: 2rem; border-bottom: 1px solid var(--rule); }
+  .brief h2 { font-size: 1.3rem; margin-bottom: .6rem; }
+  .brief p { margin: 0 0 .9rem; max-width: 62ch; color: var(--ink-2); }
+  .brief p:last-of-type { margin-bottom: 0; }
+
+  .privacy {
+    display: flex; gap: .7rem; align-items: flex-start; margin-top: 1.4rem;
+    padding: .85rem 1rem; background: var(--surface-2); border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0; font-size: .88rem; color: var(--ink-2);
+  }
+  .privacy svg { flex: none; margin-top: .15rem; }
+
+  .idrow { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.6rem; }
+  .idfield { flex: 1 1 12rem; }
+  .idfield label {
+    display: block; font-size: .72rem; font-family: "IBM Plex Mono", monospace;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .3rem;
+  }
+  .idfield input {
+    width: 100%; font-family: "IBM Plex Sans", system-ui, sans-serif; font-size: .95rem;
+    color: var(--ink); background: var(--surface); border: 1px solid var(--rule);
+    border-radius: 7px; padding: .55rem .75rem;
+  }
+  .idfield input:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; border-color: var(--accent); }
+
+  .key {
+    margin-block: 2rem 1rem; padding: 1.1rem 1.2rem; background: var(--surface);
+    border: 1px solid var(--rule); border-radius: 10px; box-shadow: var(--shadow);
+  }
+  .key .eyebrow { margin-bottom: .8rem; }
+  .key ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: .5rem; }
+  .key li { text-align: center; }
+  .key .num {
+    font-family: "IBM Plex Mono", monospace; font-size: 1.15rem; font-weight: 600;
+    color: var(--accent); display: block; line-height: 1.2;
+  }
+  .key .lab { font-size: .68rem; line-height: 1.25; color: var(--muted); display: block; margin-top: .2rem; }
+  @media (max-width: 460px) { .key ol { gap: .25rem; } .key .lab { font-size: .58rem; } }
+
+  .items { margin: 0; padding: 0; border: 0; min-width: 0; }
+  .items > legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .item {
+    background: var(--surface); border: 1px solid var(--rule-soft); border-radius: 10px;
+    padding: 1.05rem 1.15rem 1.15rem; margin-bottom: .6rem;
+  }
+  .item.flag { border-color: var(--gold); background: var(--gold-soft); }
+  .item-head { display: flex; gap: .85rem; align-items: baseline; margin-bottom: .85rem; }
+  .item-n {
+    font-family: "IBM Plex Mono", monospace; font-size: .78rem; font-weight: 500;
+    font-variant-numeric: tabular-nums; color: var(--muted); flex: none; width: 1.6rem; padding-top: .12rem;
+  }
+  .item-q { font-family: Newsreader, Georgia, serif; font-size: 1.1rem; line-height: 1.42; color: var(--ink); margin: 0; }
+
+  .rating { display: grid; grid-template-columns: repeat(5, 1fr); gap: .4rem; margin-left: 2.45rem; }
+  @media (max-width: 560px) { .rating { margin-left: 0; gap: .25rem; } }
+  .rating input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+  .rating label {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .15rem;
+    min-height: 3.6rem; padding: .4rem .25rem; border: 1px solid var(--rule); border-radius: 7px;
+    background: var(--surface); cursor: pointer; text-align: center;
+    transition: background .12s ease, border-color .12s ease;
+  }
+  .rating label:hover { border-color: var(--accent); background: var(--surface-2); }
+  .rating .v { font-family: "IBM Plex Mono", monospace; font-size: 1rem; font-weight: 600; color: var(--ink-2); line-height: 1; }
+  .rating .t { font-size: .58rem; line-height: 1.2; color: var(--muted); }
+  .rating input:checked + label { background: var(--accent); border-color: var(--accent); }
+  .rating input:checked + label .v, .rating input:checked + label .t { color: var(--accent-ink); }
+  .rating input:focus-visible + label { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+  .tally {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+    background: color-mix(in srgb, var(--surface) 94%, transparent);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid var(--rule); padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .tally-inner {
+    max-width: 50rem; margin: 0 auto; padding-inline: 20px; padding-block: .65rem;
+    display: flex; align-items: center; gap: .75rem 1.25rem; flex-wrap: wrap;
+    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .8rem;
+    font-variant-numeric: tabular-nums; color: var(--ink-2);
+  }
+  .tally b { color: var(--ink); font-weight: 600; }
+  .tally a.jump {
+    margin-left: auto; color: var(--accent); text-decoration: none; border: 1px solid var(--accent);
+    border-radius: 6px; padding: .4rem .9rem; font-size: .78rem; white-space: nowrap;
+  }
+  .tally a.jump:hover { background: var(--accent); color: var(--accent-ink); }
+  .tally a.jump:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  @media (max-width: 460px) { .tally-inner { font-size: .72rem; } }
+
+  .results { margin-top: 3rem; scroll-margin-top: 1.5rem; }
+  .chart-card {
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 12px;
+    box-shadow: var(--shadow); padding: 1.5rem 1.5rem 1.3rem;
+  }
+  .chart-card > h2 { font-size: 1.5rem; margin-bottom: .25rem; }
+  .chart-card > p.sub { margin: 0 0 1.4rem; font-size: .88rem; color: var(--muted); max-width: 58ch; }
+
+  .headline {
+    margin: 0 0 1.4rem; padding: .9rem 1.1rem; background: var(--surface-2);
+    border-left: 3px solid var(--accent); border-radius: 0 7px 7px 0;
+  }
+  .headline .eyebrow { margin-bottom: .2rem; }
+  .headline p.hl {
+    margin: 0; font-family: Newsreader, Georgia, serif; font-size: 1.3rem;
+    font-weight: 600; color: var(--ink); line-height: 1.25;
+  }
+  .headline p.note { margin: .35rem 0 0; font-size: .82rem; color: var(--muted); }
+
+  .plot { position: relative; }
+  .bar-row { display: grid; grid-template-columns: 8.5rem 1fr 2rem; align-items: center; gap: .75rem; padding-block: 3px; }
+  .bar-label { font-size: .88rem; color: var(--ink-2); line-height: 1.25; }
+  .track { position: relative; display: block; height: 18px; background: var(--surface-2); border-radius: 3px; overflow: hidden; }
+  .track .fill { display: block; height: 100%; width: 0; background: var(--accent); border-radius: 0 4px 4px 0; transition: width .35s ease; }
+  @media (prefers-reduced-motion: reduce) { .track .fill { transition: none; } }
+  .bar-val {
+    font-family: "IBM Plex Mono", monospace; font-size: .84rem; font-weight: 600;
+    font-variant-numeric: tabular-nums; color: var(--ink); text-align: right;
+  }
+  .axis { display: grid; grid-template-columns: 8.5rem 1fr 2rem; gap: .75rem; margin-top: .5rem; }
+  .axis .ticks { position: relative; height: 1rem; }
+  .axis .ticks span {
+    position: absolute; transform: translateX(-50%); top: 0;
+    font-family: "IBM Plex Mono", monospace; font-size: .64rem; color: var(--muted);
+  }
+  .axis-note { grid-column: 2; font-size: .68rem; color: var(--muted); margin: 0; text-align: center; }
+  @media (max-width: 620px) {
+    .bar-row, .axis { grid-template-columns: 1fr 2rem; }
+    .bar-label { grid-column: 1 / -1; margin-bottom: .1rem; }
+    .axis .ticks { grid-column: 1; }
+    .axis-note { grid-column: 1 / -1; }
+  }
+  .plot .grid { position: absolute; top: 0; bottom: 1.6rem; left: 9.25rem; right: 2.75rem; pointer-events: none; }
+  .plot .grid i { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--grid); }
+  @media (max-width: 620px) { .plot .grid { left: 0; right: 2.75rem; } }
+
+  /* rank-ordered list */
+  .ranks { margin-top: 1.8rem; }
+  .ranks > .eyebrow { margin-bottom: .6rem; }
+  .ranks > p.sub { margin: 0 0 .9rem; font-size: .86rem; color: var(--muted); max-width: 60ch; }
+  .rank-row {
+    display: grid; grid-template-columns: 1.7rem 1fr auto 2.4rem;
+    align-items: baseline; gap: .7rem; padding: .62rem 0; border-top: 1px solid var(--rule-soft);
+  }
+  .rank-row:first-of-type { border-top: 0; }
+  .rank-row .rk {
+    font-family: "IBM Plex Mono", monospace; font-size: .76rem; font-weight: 600;
+    color: var(--muted); text-align: center;
+  }
+  .rank-row .rn { font-size: .95rem; font-weight: 600; color: var(--ink); }
+  .rank-row .rb { font-size: .8rem; color: var(--muted); }
+  .rank-row .rv {
+    font-family: "IBM Plex Mono", monospace; font-size: .9rem; font-weight: 600;
+    font-variant-numeric: tabular-nums; color: var(--ink); text-align: right;
+  }
+  .rank-row.top { background: var(--surface-2); border-radius: 6px; padding-inline: .7rem; margin-inline: -.7rem; }
+  .rank-row.top .rk, .rank-row.top .rn, .rank-row.top .rv, .rank-row.top .rb { color: var(--accent); }
+  @media (max-width: 480px) {
+    .rank-row { grid-template-columns: 1.7rem 1fr 2.4rem; }
+    .rank-row .rb { grid-column: 2 / 4; font-size: .76rem; }
+  }
+
+  .sum-row {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+    padding: .5rem 0; border-top: 1px solid var(--rule-soft);
+  }
+  .sum-row .nm { font-size: .9rem; color: var(--ink-2); }
+  .sum-row .nm .its { font-family: "IBM Plex Mono", monospace; font-size: .72rem; color: var(--muted); margin-left: .4rem; }
+  .sum-row .val { font-family: "IBM Plex Mono", monospace; font-size: .9rem; font-variant-numeric: tabular-nums; color: var(--ink); white-space: nowrap; }
+  .sum-row .val b { font-weight: 600; color: var(--accent); }
+  .sum-row .of { color: var(--muted); }
+
+  .bandkey { margin-top: 1.8rem; padding-top: 1.2rem; border-top: 1px solid var(--rule-soft); }
+  .bandkey > .eyebrow { margin-bottom: .6rem; }
+  .bandkey > p.sub { margin: 0 0 .8rem; font-size: .86rem; color: var(--muted); max-width: 60ch; }
+  .band-row { display: flex; gap: 1rem; padding: .35rem 0; font-size: .86rem; }
+  .band-row .rng {
+    font-family: "IBM Plex Mono", monospace; font-size: .8rem; color: var(--muted);
+    font-variant-numeric: tabular-nums; width: 4.2rem; flex: none;
+  }
+  .band-row .nm { color: var(--ink-2); }
+
+  .reading {
+    margin-top: 1.8rem; padding-top: 1.2rem; border-top: 1px solid var(--rule-soft);
+    font-size: .9rem; color: var(--ink-2); max-width: 64ch;
+  }
+  .reading p { margin: 0 0 .7rem; }
+  .reading p:last-child { margin-bottom: 0; }
+
+  .reflect { margin-top: 2.5rem; }
+  .reflect > h2 { font-size: 1.45rem; margin-bottom: .3rem; }
+  .reflect > p.sub { color: var(--muted); font-size: .9rem; margin: 0 0 1.2rem; max-width: 58ch; }
+  .prompt {
+    background: var(--surface); border: 1px solid var(--rule-soft); border-radius: 10px;
+    padding: 1.1rem 1.15rem; margin-bottom: .7rem;
+  }
+  .prompt label {
+    display: block; font-family: Newsreader, Georgia, serif; font-size: 1.05rem;
+    line-height: 1.4; margin-bottom: .7rem; color: var(--ink);
+  }
+  .prompt textarea {
+    width: 100%; min-height: 9rem; resize: vertical;
+    font-family: "IBM Plex Sans", system-ui, sans-serif; font-size: .95rem; line-height: 1.5;
+    color: var(--ink); background: var(--paper); border: 1px solid var(--rule);
+    border-radius: 7px; padding: .65rem .8rem;
+  }
+  .prompt textarea:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; border-color: var(--accent); }
+  .prompt textarea::placeholder { color: var(--muted); opacity: .75; }
+
+  .submit-card {
+    margin-top: 2.5rem; background: var(--surface); border: 2px solid var(--accent);
+    border-radius: 12px; padding: 1.4rem 1.4rem 1.5rem; box-shadow: var(--shadow);
+  }
+  .submit-card h2 { font-size: 1.4rem; margin-bottom: .4rem; }
+  .submit-card > p { margin: 0 0 1rem; font-size: .92rem; color: var(--ink-2); max-width: 62ch; }
+  .steps { margin: 0 0 1.1rem; padding-left: 1.2rem; font-size: .9rem; color: var(--ink-2); line-height: 1.6; }
+  .steps li { margin-bottom: .3rem; }
+  .resp, .tmpl, #submitText {
+    width: 100%; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .78rem;
+    line-height: 1.7; color: var(--ink); background: var(--paper); border: 1px solid var(--rule);
+    border-radius: 7px; padding: .75rem .85rem; margin: 0 0 1rem; overflow-x: auto; white-space: pre;
+  }
+  .resp { -webkit-user-select: all; user-select: all; }
+  .resp .ans { font-weight: 600; }
+  #submitText { min-height: 12rem; resize: vertical; margin-bottom: 0; }
+  #submitText:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+
+  .actions { display: flex; flex-wrap: wrap; gap: .7rem; align-items: center; margin-top: 1.1rem; }
+  button {
+    font-family: "IBM Plex Sans", system-ui, sans-serif; font-size: .92rem; font-weight: 500;
+    padding: .7rem 1.3rem; border-radius: 7px; border: 1px solid transparent; cursor: pointer;
+  }
+  button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .btn-primary { background: var(--accent); color: var(--accent-ink); }
+  .btn-primary:hover { background: var(--accent-2); }
+  .btn-ghost { background: transparent; color: var(--ink-2); border-color: var(--rule); }
+  .btn-ghost:hover { border-color: var(--muted); background: var(--surface-2); }
+  .hint { font-size: .84rem; color: var(--muted); }
+  .hint.warn { color: var(--gold); font-weight: 500; }
+  .hint.ok { color: var(--accent); font-weight: 500; }
+
+  footer.colophon {
+    margin-top: 3rem; padding-top: 1.3rem; border-top: 1px solid var(--rule);
+    font-size: .8rem; color: var(--muted); line-height: 1.6;
+  }
+  footer.colophon p { margin: 0 0 .5rem; max-width: 62ch; }
+  footer.colophon p.cite { margin-top: 1rem; padding-top: .8rem; border-top: 1px solid var(--rule-soft); font-size: .74rem; }
+  footer.colophon cite { font-style: italic; }
+
+  @media print {
+    :root {
+      --paper:#fff; --surface:#fff; --surface-2:#f4f4f4; --ink:#000; --ink-2:#222;
+      --muted:#555; --accent:#14524b; --rule:#bbb; --rule-soft:#ddd; --grid:#ccc; --shadow:none;
+    }
+    .tally, .actions, .no-print { display: none !important; }
+    .wrap { padding-block: 0 1rem; }
+    body { font-size: 11pt; }
+    .item, .prompt, .chart-card, .submit-card { break-inside: avoid; box-shadow: none; }
+    .rating input:checked + label { background: #14524b !important; }
+    .rating input:checked + label, .track .fill, .item.flag {
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+    .results { break-before: page; }
+    .idfield input { border: 0; border-bottom: 1px solid #000; border-radius: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Leadership Self-Assessment&nbsp;&nbsp;&middot;&nbsp;&nbsp;Questionnaire 6.3</p>
+    <h1>Leadership Strengths Questionnaire</h1>
+    <p class="standfirst">Thirty statements about what you are like at work. Your answers rank your strengths across five areas of performance.</p>
+    <div class="meta">
+      <span>Items <b>30</b></span>
+      <span>Scale <b>1&ndash;5</b></span>
+      <span>Strengths <b>5</b></span>
+      <span>Time <b>~10 min</b></span>
+    </div>
+  </header>
+
+  <section class="brief">
+    <h2>Before you begin</h2>
+    <p>Answer the following statements in terms of whether the statement describes <em>what you are like</em>. For each statement, choose the number that indicates the degree to which <em>you feel the statement is like you</em>.</p>
+    <p>Be as candid as possible. This questionnaire measures where your strengths are, not whether you have any &mdash; everyone has multiple strengths, and a low score in one area simply means your strength lies elsewhere.</p>
+
+    <div class="privacy">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M8 1.5 3 3.5v4c0 3 2.1 5.6 5 7 2.9-1.4 5-4 5-7v-4L8 1.5Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+        <path d="m5.8 7.9 1.6 1.6 3-3.2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span><strong>Your individual ratings stay on your device.</strong> This page sends nothing anywhere. Your work is saved in this browser so you can close the page and come back.</span>
+    </div>
+
+    <div class="idrow">
+      <div class="idfield">
+        <label for="studentName">Your name</label>
+        <input type="text" id="studentName" autocomplete="name" placeholder="First and last">
+      </div>
+      <div class="idfield">
+        <label for="studentDate">Date completed</label>
+        <input type="text" id="studentDate" placeholder="e.g. October 23, 2026">
+      </div>
+    </div>
+  </section>
+
+  <div class="key">
+    <p class="eyebrow">Rating scale</p>
+    <ol>
+      <li><span class="num">1</span><span class="lab">Very much unlike me</span></li>
+      <li><span class="num">2</span><span class="lab">Unlike me</span></li>
+      <li><span class="num">3</span><span class="lab">Neutral</span></li>
+      <li><span class="num">4</span><span class="lab">Like me</span></li>
+      <li><span class="num">5</span><span class="lab">Very much like me</span></li>
+    </ol>
+  </div>
+
+  <form id="survey">
+    <fieldset class="items" id="itemList">
+      <legend>Leadership Strengths Questionnaire items</legend>
+        <div class="item" id="item-1">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">01</span>
+            <p class="item-q" id="q-1">I am an energetic participant when working with others.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-1">
+            <input type="radio" name="q1" id="q1v1" value="1"><label for="q1v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q1" id="q1v2" value="2"><label for="q1v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q1" id="q1v3" value="3"><label for="q1v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q1" id="q1v4" value="4"><label for="q1v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q1" id="q1v5" value="5"><label for="q1v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-2">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">02</span>
+            <p class="item-q" id="q-2">Brainstorming is one of my strengths.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-2">
+            <input type="radio" name="q2" id="q2v1" value="1"><label for="q2v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q2" id="q2v2" value="2"><label for="q2v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q2" id="q2v3" value="3"><label for="q2v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q2" id="q2v4" value="4"><label for="q2v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q2" id="q2v5" value="5"><label for="q2v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-3">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">03</span>
+            <p class="item-q" id="q-3">I am good at encouraging coworkers when they feel frustrated about their work.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-3">
+            <input type="radio" name="q3" id="q3v1" value="1"><label for="q3v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q3" id="q3v2" value="2"><label for="q3v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q3" id="q3v3" value="3"><label for="q3v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q3" id="q3v4" value="4"><label for="q3v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q3" id="q3v5" value="5"><label for="q3v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-4">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">04</span>
+            <p class="item-q" id="q-4">I want to know “why” we are doing what we are doing.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-4">
+            <input type="radio" name="q4" id="q4v1" value="1"><label for="q4v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q4" id="q4v2" value="2"><label for="q4v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q4" id="q4v3" value="3"><label for="q4v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q4" id="q4v4" value="4"><label for="q4v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q4" id="q4v5" value="5"><label for="q4v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-5">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">05</span>
+            <p class="item-q" id="q-5">I look for common ground in opposing opinions of others.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-5">
+            <input type="radio" name="q5" id="q5v1" value="1"><label for="q5v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q5" id="q5v2" value="2"><label for="q5v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q5" id="q5v3" value="3"><label for="q5v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q5" id="q5v4" value="4"><label for="q5v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q5" id="q5v5" value="5"><label for="q5v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-6">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">06</span>
+            <p class="item-q" id="q-6">I enjoy implementing the details of projects.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-6">
+            <input type="radio" name="q6" id="q6v1" value="1"><label for="q6v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q6" id="q6v2" value="2"><label for="q6v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q6" id="q6v3" value="3"><label for="q6v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q6" id="q6v4" value="4"><label for="q6v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q6" id="q6v5" value="5"><label for="q6v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-7">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">07</span>
+            <p class="item-q" id="q-7">I like to explore creative approaches to problems.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-7">
+            <input type="radio" name="q7" id="q7v1" value="1"><label for="q7v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q7" id="q7v2" value="2"><label for="q7v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q7" id="q7v3" value="3"><label for="q7v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q7" id="q7v4" value="4"><label for="q7v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q7" id="q7v5" value="5"><label for="q7v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-8">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">08</span>
+            <p class="item-q" id="q-8">I go out of my way to help others feel good about their accomplishments.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-8">
+            <input type="radio" name="q8" id="q8v1" value="1"><label for="q8v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q8" id="q8v2" value="2"><label for="q8v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q8" id="q8v3" value="3"><label for="q8v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q8" id="q8v4" value="4"><label for="q8v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q8" id="q8v5" value="5"><label for="q8v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-9">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">09</span>
+            <p class="item-q" id="q-9">Examining complex problems or issues is one of my strengths.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-9">
+            <input type="radio" name="q9" id="q9v1" value="1"><label for="q9v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q9" id="q9v2" value="2"><label for="q9v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q9" id="q9v3" value="3"><label for="q9v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q9" id="q9v4" value="4"><label for="q9v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q9" id="q9v5" value="5"><label for="q9v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-10">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">10</span>
+            <p class="item-q" id="q-10">I am a mediator in conflict situations.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-10">
+            <input type="radio" name="q10" id="q10v1" value="1"><label for="q10v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q10" id="q10v2" value="2"><label for="q10v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q10" id="q10v3" value="3"><label for="q10v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q10" id="q10v4" value="4"><label for="q10v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q10" id="q10v5" value="5"><label for="q10v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-11">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">11</span>
+            <p class="item-q" id="q-11">I stick with the task until the work is completed.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-11">
+            <input type="radio" name="q11" id="q11v1" value="1"><label for="q11v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q11" id="q11v2" value="2"><label for="q11v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q11" id="q11v3" value="3"><label for="q11v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q11" id="q11v4" value="4"><label for="q11v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q11" id="q11v5" value="5"><label for="q11v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-12">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">12</span>
+            <p class="item-q" id="q-12">I can initiate change, if it is needed, when working with others.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-12">
+            <input type="radio" name="q12" id="q12v1" value="1"><label for="q12v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q12" id="q12v2" value="2"><label for="q12v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q12" id="q12v3" value="3"><label for="q12v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q12" id="q12v4" value="4"><label for="q12v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q12" id="q12v5" value="5"><label for="q12v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-13">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">13</span>
+            <p class="item-q" id="q-13">I show concern for the personal well-being of others.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-13">
+            <input type="radio" name="q13" id="q13v1" value="1"><label for="q13v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q13" id="q13v2" value="2"><label for="q13v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q13" id="q13v3" value="3"><label for="q13v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q13" id="q13v4" value="4"><label for="q13v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q13" id="q13v5" value="5"><label for="q13v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-14">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">14</span>
+            <p class="item-q" id="q-14">I like to consider various options for doing things.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-14">
+            <input type="radio" name="q14" id="q14v1" value="1"><label for="q14v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q14" id="q14v2" value="2"><label for="q14v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q14" id="q14v3" value="3"><label for="q14v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q14" id="q14v4" value="4"><label for="q14v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q14" id="q14v5" value="5"><label for="q14v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-15">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">15</span>
+            <p class="item-q" id="q-15">I am effective communicating with people who are inflexible.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-15">
+            <input type="radio" name="q15" id="q15v1" value="1"><label for="q15v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q15" id="q15v2" value="2"><label for="q15v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q15" id="q15v3" value="3"><label for="q15v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q15" id="q15v4" value="4"><label for="q15v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q15" id="q15v5" value="5"><label for="q15v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-16">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">16</span>
+            <p class="item-q" id="q-16">I try to follow through with ideas so that the work gets done.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-16">
+            <input type="radio" name="q16" id="q16v1" value="1"><label for="q16v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q16" id="q16v2" value="2"><label for="q16v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q16" id="q16v3" value="3"><label for="q16v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q16" id="q16v4" value="4"><label for="q16v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q16" id="q16v5" value="5"><label for="q16v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-17">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">17</span>
+            <p class="item-q" id="q-17">I enjoy creating a vision for a work-related project.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-17">
+            <input type="radio" name="q17" id="q17v1" value="1"><label for="q17v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q17" id="q17v2" value="2"><label for="q17v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q17" id="q17v3" value="3"><label for="q17v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q17" id="q17v4" value="4"><label for="q17v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q17" id="q17v5" value="5"><label for="q17v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-18">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">18</span>
+            <p class="item-q" id="q-18">I am the “glue” that helps hold the group together.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-18">
+            <input type="radio" name="q18" id="q18v1" value="1"><label for="q18v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q18" id="q18v2" value="2"><label for="q18v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q18" id="q18v3" value="3"><label for="q18v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q18" id="q18v4" value="4"><label for="q18v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q18" id="q18v5" value="5"><label for="q18v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-19">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">19</span>
+            <p class="item-q" id="q-19">I like exploring the details of a problem before trying to solve it.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-19">
+            <input type="radio" name="q19" id="q19v1" value="1"><label for="q19v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q19" id="q19v2" value="2"><label for="q19v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q19" id="q19v3" value="3"><label for="q19v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q19" id="q19v4" value="4"><label for="q19v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q19" id="q19v5" value="5"><label for="q19v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-20">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">20</span>
+            <p class="item-q" id="q-20">I can draw the best out of people with diverse opinions.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-20">
+            <input type="radio" name="q20" id="q20v1" value="1"><label for="q20v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q20" id="q20v2" value="2"><label for="q20v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q20" id="q20v3" value="3"><label for="q20v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q20" id="q20v4" value="4"><label for="q20v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q20" id="q20v5" value="5"><label for="q20v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-21">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">21</span>
+            <p class="item-q" id="q-21">I like making to-do lists so that the work gets completed.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-21">
+            <input type="radio" name="q21" id="q21v1" value="1"><label for="q21v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q21" id="q21v2" value="2"><label for="q21v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q21" id="q21v3" value="3"><label for="q21v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q21" id="q21v4" value="4"><label for="q21v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q21" id="q21v5" value="5"><label for="q21v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-22">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">22</span>
+            <p class="item-q" id="q-22">I can “think outside the box.”</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-22">
+            <input type="radio" name="q22" id="q22v1" value="1"><label for="q22v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q22" id="q22v2" value="2"><label for="q22v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q22" id="q22v3" value="3"><label for="q22v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q22" id="q22v4" value="4"><label for="q22v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q22" id="q22v5" value="5"><label for="q22v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-23">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">23</span>
+            <p class="item-q" id="q-23">Encouraging others comes easily for me.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-23">
+            <input type="radio" name="q23" id="q23v1" value="1"><label for="q23v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q23" id="q23v2" value="2"><label for="q23v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q23" id="q23v3" value="3"><label for="q23v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q23" id="q23v4" value="4"><label for="q23v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q23" id="q23v5" value="5"><label for="q23v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-24">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">24</span>
+            <p class="item-q" id="q-24">I like thinking things through before engaging in work projects.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-24">
+            <input type="radio" name="q24" id="q24v1" value="1"><label for="q24v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q24" id="q24v2" value="2"><label for="q24v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q24" id="q24v3" value="3"><label for="q24v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q24" id="q24v4" value="4"><label for="q24v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q24" id="q24v5" value="5"><label for="q24v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-25">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">25</span>
+            <p class="item-q" id="q-25">I am good at finding common ground when a conflict is present.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-25">
+            <input type="radio" name="q25" id="q25v1" value="1"><label for="q25v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q25" id="q25v2" value="2"><label for="q25v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q25" id="q25v3" value="3"><label for="q25v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q25" id="q25v4" value="4"><label for="q25v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q25" id="q25v5" value="5"><label for="q25v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-26">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">26</span>
+            <p class="item-q" id="q-26">I enjoy scheduling and coordinating activities so the work is completed.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-26">
+            <input type="radio" name="q26" id="q26v1" value="1"><label for="q26v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q26" id="q26v2" value="2"><label for="q26v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q26" id="q26v3" value="3"><label for="q26v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q26" id="q26v4" value="4"><label for="q26v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q26" id="q26v5" value="5"><label for="q26v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-27">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">27</span>
+            <p class="item-q" id="q-27">I am good at developing new ideas for others to consider.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-27">
+            <input type="radio" name="q27" id="q27v1" value="1"><label for="q27v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q27" id="q27v2" value="2"><label for="q27v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q27" id="q27v3" value="3"><label for="q27v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q27" id="q27v4" value="4"><label for="q27v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q27" id="q27v5" value="5"><label for="q27v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-28">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">28</span>
+            <p class="item-q" id="q-28">I am good at encouraging others to participate on projects.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-28">
+            <input type="radio" name="q28" id="q28v1" value="1"><label for="q28v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q28" id="q28v2" value="2"><label for="q28v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q28" id="q28v3" value="3"><label for="q28v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q28" id="q28v4" value="4"><label for="q28v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q28" id="q28v5" value="5"><label for="q28v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-29">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">29</span>
+            <p class="item-q" id="q-29">I like to explore problems from many different perspectives.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-29">
+            <input type="radio" name="q29" id="q29v1" value="1"><label for="q29v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q29" id="q29v2" value="2"><label for="q29v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q29" id="q29v3" value="3"><label for="q29v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q29" id="q29v4" value="4"><label for="q29v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q29" id="q29v5" value="5"><label for="q29v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+        <div class="item" id="item-30">
+          <div class="item-head">
+            <span class="item-n" aria-hidden="true">30</span>
+            <p class="item-q" id="q-30">I am effective at helping coworkers reach consensus.</p>
+          </div>
+          <div class="rating" role="radiogroup" aria-labelledby="q-30">
+            <input type="radio" name="q30" id="q30v1" value="1"><label for="q30v1" aria-label="1 — Very much unlike me"><span class="v">1</span><span class="t">Very much unlike me</span></label>
+            <input type="radio" name="q30" id="q30v2" value="2"><label for="q30v2" aria-label="2 — Unlike me"><span class="v">2</span><span class="t">Unlike me</span></label>
+            <input type="radio" name="q30" id="q30v3" value="3"><label for="q30v3" aria-label="3 — Neutral"><span class="v">3</span><span class="t">Neutral</span></label>
+            <input type="radio" name="q30" id="q30v4" value="4"><label for="q30v4" aria-label="4 — Like me"><span class="v">4</span><span class="t">Like me</span></label>
+            <input type="radio" name="q30" id="q30v5" value="5"><label for="q30v5" aria-label="5 — Very much like me"><span class="v">5</span><span class="t">Very much like me</span></label>
+          </div>
+        </div>
+    </fieldset>
+  </form>
+
+  <section class="results" id="results">
+
+    <div class="chart-card">
+      <h2>Your strengths profile</h2>
+      <p class="sub">Each strength is the sum of its six items, from 6 to 30. What matters is the rank order &mdash; where your greatest strengths are, and where you are weaker.</p>
+
+      <div class="headline js-only" id="headline">
+        <p class="eyebrow">Greatest strength</p>
+        <p class="hl" id="headlineText">&mdash;</p>
+        <p class="note" id="headlineNote">Answer all 30 statements to see your result.</p>
+      </div>
+
+      <div class="js-only">
+        <div class="plot" id="plot">
+          <div class="grid" id="grid" aria-hidden="true"></div>
+        <div class="bar-row" data-strength="impl">
+          <span class="bar-label">Implementer</span>
+          <span class="track"><i class="fill"></i></span>
+          <span class="bar-val">&ndash;</span>
+        </div>
+        <div class="bar-row" data-strength="innov">
+          <span class="bar-label">Innovator</span>
+          <span class="track"><i class="fill"></i></span>
+          <span class="bar-val">&ndash;</span>
+        </div>
+        <div class="bar-row" data-strength="encou">
+          <span class="bar-label">Encourager</span>
+          <span class="track"><i class="fill"></i></span>
+          <span class="bar-val">&ndash;</span>
+        </div>
+        <div class="bar-row" data-strength="analy">
+          <span class="bar-label">Analyzer</span>
+          <span class="track"><i class="fill"></i></span>
+          <span class="bar-val">&ndash;</span>
+        </div>
+        <div class="bar-row" data-strength="media">
+          <span class="bar-label">Mediator</span>
+          <span class="track"><i class="fill"></i></span>
+          <span class="bar-val">&ndash;</span>
+        </div>
+          <div class="axis">
+            <span></span>
+            <span class="ticks" id="ticks" aria-hidden="true"></span>
+            <span></span>
+          </div>
+          <p class="axis-note">Gridlines mark the boundaries between the five ranges.</p>
+        </div>
+
+        <div class="ranks">
+          <p class="eyebrow">Ranked</p>
+          <p class="sub">Your strengths in order, strongest first.</p>
+        <div class="rank-row" data-slot="1"><span class="rk">1</span><span class="rn">&mdash;</span><span class="rb"></span><span class="rv"></span></div>
+        <div class="rank-row" data-slot="2"><span class="rk">2</span><span class="rn">&mdash;</span><span class="rb"></span><span class="rv"></span></div>
+        <div class="rank-row" data-slot="3"><span class="rk">3</span><span class="rn">&mdash;</span><span class="rb"></span><span class="rv"></span></div>
+        <div class="rank-row" data-slot="4"><span class="rk">4</span><span class="rn">&mdash;</span><span class="rb"></span><span class="rv"></span></div>
+        <div class="rank-row" data-slot="5"><span class="rk">5</span><span class="rn">&mdash;</span><span class="rb"></span><span class="rv"></span></div>
+        </div>
+      </div>
+
+      <div class="no-js-only">
+        <p class="sub" style="margin-bottom:1rem">Scripts are blocked in this browser, so your totals are listed instead of charted. Your highest total is your greatest strength.</p>
+        <div class="sum-row">
+          <span class="nm">Implementer <span class="its">items 1, 6, 11, 16, 21, 26</span></span>
+          <span class="val"><b class="c-impl"></b> <span class="of">/ 30</span></span>
+        </div>
+        <div class="sum-row">
+          <span class="nm">Innovator <span class="its">items 2, 7, 12, 17, 22, 27</span></span>
+          <span class="val"><b class="c-innov"></b> <span class="of">/ 30</span></span>
+        </div>
+        <div class="sum-row">
+          <span class="nm">Encourager <span class="its">items 3, 8, 13, 18, 23, 28</span></span>
+          <span class="val"><b class="c-encou"></b> <span class="of">/ 30</span></span>
+        </div>
+        <div class="sum-row">
+          <span class="nm">Analyzer <span class="its">items 4, 9, 14, 19, 24, 29</span></span>
+          <span class="val"><b class="c-analy"></b> <span class="of">/ 30</span></span>
+        </div>
+        <div class="sum-row">
+          <span class="nm">Mediator <span class="its">items 5, 10, 15, 20, 25, 30</span></span>
+          <span class="val"><b class="c-media"></b> <span class="of">/ 30</span></span>
+        </div>
+      </div>
+
+      <div class="bandkey">
+        <p class="eyebrow">Ranges</p>
+        <p class="sub">The same five ranges apply to each strength.</p>
+        <div class="band-row"><span class="rng">26&ndash;30</span><span class="nm">Very high range</span></div>
+        <div class="band-row"><span class="rng">21&ndash;25</span><span class="nm">High range</span></div>
+        <div class="band-row"><span class="rng">16&ndash;20</span><span class="nm">Moderate range</span></div>
+        <div class="band-row"><span class="rng">11&ndash;15</span><span class="nm">Low range</span></div>
+        <div class="band-row"><span class="rng">6&ndash;10</span><span class="nm">Very low range</span></div>
+      </div>
+
+      <div class="reading">
+        <p>This questionnaire is designed to measure your strengths in the areas of implementation, innovation, encouragement, analysis, and mediation. By assessing the rank order of your scores, you can determine the areas in which you have the greatest strengths and the areas in which you are weaker. A high score in a certain area indicates where you are strong; a low score shows where you are weak.</p>
+        <p>Every person has multiple strengths. In addition to the strengths revealed here, you may wish to complete other strengths assessments to obtain a more complete picture of all of your strengths.</p>
+      </div>
+    </div>
+
+    <section class="reflect">
+      <h2>Reflection</h2>
+      <p class="sub">Your profile is only the prompt. This question is the assignment &mdash; it is what you turn in.</p>
+      <div class="prompt">
+        <label for="r1">Based on your scores on this assessment, what potential implications might your relative strengths in areas such as implementation, innovation, encouragement, analysis, and mediation have for how you contribute to and lead others in groups or teams?</label>
+        <textarea id="r1" placeholder="Point to specific strengths or statements, and be concrete about the situations where the difference would show."></textarea>
+      </div>
+    </section>
+
+    <!-- ===== EDIT ME: submission instructions ===== -->
+    <section class="submit-card">
+      <h2>Turn this in</h2>
+      <p>Submit your five strength scores, all 30 ratings, and your written reflection.</p>
+
+      <p class="eyebrow" style="margin-bottom:.5rem">Your 30 responses</p>
+      <pre class="resp" id="respBlock">01:<span class="ans a1"></span>   02:<span class="ans a2"></span>   03:<span class="ans a3"></span>   04:<span class="ans a4"></span>   05:<span class="ans a5"></span>   06:<span class="ans a6"></span>
+07:<span class="ans a7"></span>   08:<span class="ans a8"></span>   09:<span class="ans a9"></span>   10:<span class="ans a10"></span>   11:<span class="ans a11"></span>   12:<span class="ans a12"></span>
+13:<span class="ans a13"></span>   14:<span class="ans a14"></span>   15:<span class="ans a15"></span>   16:<span class="ans a16"></span>   17:<span class="ans a17"></span>   18:<span class="ans a18"></span>
+19:<span class="ans a19"></span>   20:<span class="ans a20"></span>   21:<span class="ans a21"></span>   22:<span class="ans a22"></span>   23:<span class="ans a23"></span>   24:<span class="ans a24"></span>
+25:<span class="ans a25"></span>   26:<span class="ans a26"></span>   27:<span class="ans a27"></span>   28:<span class="ans a28"></span>   29:<span class="ans a29"></span>   30:<span class="ans a30"></span></pre>
+
+      <div class="js-only">
+        <ol class="steps">
+          <li>Click <strong>Copy my submission</strong> below.</li>
+          <li>Open the Canvas assignment and choose the <strong>Text Entry</strong> tab.</li>
+          <li>Paste, then click <strong>Submit Assignment</strong>.</li>
+        </ol>
+        <textarea id="submitText" readonly spellcheck="false" aria-label="Your submission text"></textarea>
+        <div class="actions no-print">
+          <button type="button" class="btn-primary" id="copyBtn">Copy my submission</button>
+          <button type="button" class="btn-ghost" id="printBtn">Print / save as PDF</button>
+          <button type="button" class="btn-ghost" id="resetBtn">Start over</button>
+          <span class="hint" id="copyHint"></span>
+        </div>
+      </div>
+
+      <div class="no-js-only">
+        <ol class="steps">
+          <li>Read your strength totals and your 30 responses from the boxes above.</li>
+          <li>Open the Canvas assignment and choose the <strong>Text Entry</strong> tab.</li>
+          <li>Fill in the template below, then click <strong>Submit Assignment</strong>.</li>
+        </ol>
+        <p class="hint" style="margin:0 0 .7rem">Scripts are blocked, so the one-click copy is unavailable. <strong>Print / save as PDF</strong> (Ctrl&#8239;+&#8239;P or &#8984;&#8239;P) captures everything and can be uploaded as a file instead.</p>
+        <pre class="tmpl">Name:
+Date completed:
+
+TOTAL SCORES (each out of 30)
+  Implementer ... ___   range: ____________
+  Innovator ..... ___   range: ____________
+  Encourager .... ___   range: ____________
+  Analyzer ...... ___   range: ____________
+  Mediator ...... ___   range: ____________
+
+My greatest strength: ______________________
+
+RESPONSES 01-30: __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
+                 __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
+
+REFLECTION - Implications of my relative strengths for how I
+contribute to and lead others in groups or teams:
+</pre>
+      </div>
+    </section>
+    <!-- ===== /EDIT ME ===== -->
+  </section>
+
+  <footer class="colophon">
+    <p>Each strength is the sum of its six items, from a minimum of 6 to a maximum of 30. There are no reverse-scored items, and there is no overall total &mdash; the questionnaire measures five separate strengths.</p>
+    <p>Complete this questionnaire individually. You will not be asked to share your individual ratings with the class.</p>
+    <p class="cite">Source: Questionnaire&nbsp;6.3, &ldquo;Leadership Strengths Questionnaire,&rdquo; from <cite>Introduction to Leadership</cite>, ch.&nbsp;6, &ldquo;Engaging Strengths,&rdquo; pp.&nbsp;150&ndash;153.</p>
+  </footer>
+
+</div>
+
+<div class="tally">
+  <div class="tally-inner">
+    <span><b class="c-answered"></b> of 30 answered</span>
+    <a class="jump" href="#results">Go to my profile &darr;</a>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  document.documentElement.className += " has-js";
+
+  var STRENGTHS = [["impl","Implementer",[1,6,11,16,21,26]], ["innov","Innovator",[2,7,12,17,22,27]], ["encou","Encourager",[3,8,13,18,23,28]], ["analy","Analyzer",[4,9,14,19,24,29]], ["media","Mediator",[5,10,15,20,25,30]]];
+  var BANDS = [[26,30,"Very high range"], [21,25,"High range"], [16,20,"Moderate range"], [11,15,"Low range"], [6,10,"Very low range"]];
+  var NITEMS = 30, SMIN = 6, SMAX = 30;
+
+  var KEY = "lsq.v1";
+
+  var form     = document.getElementById("survey");
+  var submitTA = document.getElementById("submitText");
+  var copyHint = document.getElementById("copyHint");
+  var nameEl   = document.getElementById("studentName");
+  var dateEl   = document.getElementById("studentDate");
+  var noteEl   = document.getElementById("r1");
+
+  var PROMPT = "Based on your scores on this assessment, what potential implications " +
+    "might your relative strengths in areas such as implementation, innovation, " +
+    "encouragement, analysis, and mediation have for how you contribute to and lead " +
+    "others in groups or teams?";
+
+  function readAll() {
+    var out = {};
+    for (var n = 1; n <= NITEMS; n++) {
+      var el = form.querySelector('input[name="q' + n + '"]:checked');
+      out[n] = el ? Number(el.value) : null;
+    }
+    return out;
+  }
+
+  function totals(raw) {
+    var t = {};
+    STRENGTHS.forEach(function (s) {
+      var sum = 0, cnt = 0;
+      s[2].forEach(function (n) { if (raw[n] !== null) { sum += raw[n]; cnt++; } });
+      t[s[0]] = { sum: sum, complete: cnt === s[2].length };
+    });
+    return t;
+  }
+
+  function answeredCount(raw) {
+    var k = 0;
+    for (var n = 1; n <= NITEMS; n++) { if (raw[n] !== null) k++; }
+    return k;
+  }
+
+  function bandFor(score) {
+    for (var i = 0; i < BANDS.length; i++) {
+      if (score >= BANDS[i][0] && score <= BANDS[i][1]) return BANDS[i][2];
+    }
+    return "—";
+  }
+
+  /* ---------- chart ---------- */
+
+  var ticks = document.getElementById("ticks");
+  var grid  = document.getElementById("grid");
+  [6, 11, 16, 21, 26, 30].forEach(function (t) {
+    var pct = (t - SMIN) / (SMAX - SMIN) * 100;
+    var sp = document.createElement("span");
+    sp.textContent = t;
+    sp.style.left = pct + "%";
+    ticks.appendChild(sp);
+    var g = document.createElement("i");
+    g.style.left = pct + "%";
+    grid.appendChild(g);
+  });
+
+  function draw(raw) {
+    var t = totals(raw), done = answeredCount(raw) === NITEMS;
+
+    STRENGTHS.forEach(function (s) {
+      var row = document.querySelector('.bar-row[data-strength="' + s[0] + '"]');
+      var rec = t[s[0]];
+      if (!rec.complete) {
+        row.querySelector(".fill").style.width = "0";
+        row.querySelector(".bar-val").textContent = "–";
+      } else {
+        row.querySelector(".fill").style.width =
+          ((rec.sum - SMIN) / (SMAX - SMIN) * 100) + "%";
+        row.querySelector(".bar-val").textContent = rec.sum;
+      }
+    });
+
+    // rank order, strongest first
+    var ranked = STRENGTHS.map(function (s) {
+      return { name: s[1], sum: t[s[0]].sum, complete: t[s[0]].complete };
+    });
+    ranked.sort(function (a, b) { return b.sum - a.sum; });
+
+    var rows = document.querySelectorAll(".rank-row");
+    var topScore = done ? ranked[0].sum : null;
+    for (var i = 0; i < rows.length; i++) {
+      var r = ranked[i];
+      rows[i].className = "rank-row" + (done && r.sum === topScore ? " top" : "");
+      rows[i].querySelector(".rn").textContent = done ? r.name : "—";
+      rows[i].querySelector(".rb").textContent = done ? bandFor(r.sum) : "";
+      rows[i].querySelector(".rv").textContent = done ? r.sum : "";
+    }
+
+    var hText = document.getElementById("headlineText");
+    var hNote = document.getElementById("headlineNote");
+    if (!done) {
+      hText.textContent = "—";
+      hNote.textContent = "Answer all 30 statements to see your result. " +
+        answeredCount(raw) + " of " + NITEMS + " done.";
+    } else {
+      var tops = ranked.filter(function (r) { return r.sum === topScore; })
+                       .map(function (r) { return r.name; });
+      if (tops.length === 1) {
+        hText.textContent = tops[0];
+        hNote.textContent = tops[0] + " scored " + topScore + " of " + SMAX +
+          " — " + bandFor(topScore).toLowerCase() + ".";
+      } else {
+        hText.textContent = tops.slice(0, -1).join(", ") + " and " + tops[tops.length - 1];
+        hNote.textContent = "Tied at " + topScore + " of " + SMAX +
+          " — " + bandFor(topScore).toLowerCase() + " for each.";
+      }
+    }
+  }
+
+  /* ---------- persistence ---------- */
+
+  function save() {
+    try {
+      localStorage.setItem(KEY, JSON.stringify({
+        answers: readAll(), note: noteEl.value, name: nameEl.value, date: dateEl.value
+      }));
+    } catch (e) { /* storage blocked */ }
+  }
+
+  function applyState(d) {
+    if (!d) return;
+    if (d.answers) {
+      Object.keys(d.answers).forEach(function (n) {
+        var v = d.answers[n];
+        if (!v) return;
+        var el = document.getElementById("q" + n + "v" + v);
+        if (el) el.checked = true;
+      });
+    }
+    if (typeof d.note === "string") noteEl.value = d.note;
+    if (typeof d.name === "string") nameEl.value = d.name;
+    if (typeof d.date === "string") dateEl.value = d.date;
+  }
+
+  function restore() {
+    var raw = null;
+    try { raw = localStorage.getItem(KEY); } catch (e) { return; }
+    if (!raw) return;
+    try { applyState(JSON.parse(raw)); } catch (e) { /* corrupt */ }
+  }
+
+  /* ---------- submission ---------- */
+
+  function wrap(s, width) {
+    var out = [];
+    s.split("\n").forEach(function (para) {
+      if (!para.trim()) { out.push(""); return; }
+      var line = "";
+      para.split(/\s+/).forEach(function (w) {
+        if (!w) return;
+        if (line && (line + " " + w).length > width) { out.push(line); line = w; }
+        else { line = line ? line + " " + w : w; }
+      });
+      if (line) out.push(line);
+    });
+    return out.join("\n");
+  }
+
+  function pad(s, n) { while (s.length < n) { s += "."; } return s; }
+
+  function buildSubmission() {
+    var raw = readAll(), t = totals(raw), done = answeredCount(raw) === NITEMS;
+
+    var ranked = STRENGTHS.map(function (s) {
+      return { name: s[1], sum: t[s[0]].sum };
+    });
+    ranked.sort(function (a, b) { return b.sum - a.sum; });
+
+    var L = [];
+    L.push("LEADERSHIP STRENGTHS QUESTIONNAIRE");
+    L.push("==================================");
+    L.push("Name: " + (nameEl.value.trim() || "[your name]"));
+    L.push("Date completed: " + (dateEl.value.trim() || "[date]"));
+    L.push("");
+    if (!done) {
+      L.push("INCOMPLETE — " + (NITEMS - answeredCount(raw)) + " of 30 statements unanswered.");
+      L.push("");
+    }
+    L.push("TOTAL SCORES (each out of 30)");
+    L.push("----------------------------------");
+    STRENGTHS.forEach(function (s) {
+      var rec = t[s[0]];
+      L.push("  " + pad(s[1] + " ", 16) + " " +
+             (rec.complete ? (rec.sum < 10 ? " " : "") + rec.sum + "   " + bandFor(rec.sum) : " –"));
+    });
+    L.push("");
+    if (done) {
+      L.push("RANK ORDER (strongest first)");
+      L.push("----------------------------------");
+      ranked.forEach(function (r, i) {
+        L.push("  " + (i + 1) + ". " + pad(r.name + " ", 16) + " " +
+               (r.sum < 10 ? " " : "") + r.sum);
+      });
+      L.push("");
+    }
+    L.push("ITEM RESPONSES (1 = very much unlike me … 5 = very much like me)");
+    L.push("----------------------------------");
+    for (var r0 = 1; r0 <= NITEMS; r0 += 6) {
+      var cells = [];
+      for (var n = r0; n < r0 + 6; n++) {
+        cells.push((n < 10 ? "0" : "") + n + ":" + (raw[n] === null ? "–" : raw[n]));
+      }
+      L.push("  " + cells.join("   "));
+    }
+    L.push("");
+    L.push("REFLECTION");
+    L.push("----------------------------------");
+    L.push("");
+    L.push(wrap(PROMPT, 60));
+    L.push("");
+    var a = noteEl.value.trim();
+    L.push(a ? wrap(a, 60) : "[not answered]");
+    return L.join("\n");
+  }
+
+  function update() {
+    var raw = readAll();
+    draw(raw);
+    submitTA.value = buildSubmission();
+  }
+
+  /* ---------- copy ---------- */
+
+  function flash(msg, ok) {
+    copyHint.textContent = msg;
+    copyHint.className = "hint " + (ok ? "ok" : "warn");
+    window.setTimeout(function () { copyHint.textContent = ""; copyHint.className = "hint"; }, 4000);
+  }
+
+  function legacyCopy() {
+    submitTA.removeAttribute("readonly");
+    submitTA.focus();
+    submitTA.select();
+    var ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+    submitTA.setAttribute("readonly", "readonly");
+    return ok;
+  }
+
+  document.getElementById("copyBtn").addEventListener("click", function () {
+    update();
+    var raw = readAll();
+    if (answeredCount(raw) !== NITEMS) {
+      var missing = [];
+      for (var n = 1; n <= NITEMS; n++) { if (raw[n] === null) missing.push(n); }
+      missing.forEach(function (m) { document.getElementById("item-" + m).className = "item flag"; });
+      flash(missing.length + " statement" + (missing.length > 1 ? "s are" : " is") +
+            " still blank — highlighted above.", false);
+      document.getElementById("item-" + missing[0]).scrollIntoView({ behavior: "smooth", block: "center" });
+      return;
+    }
+    var text = submitTA.value;
+    var done = function () { flash("Copied — now paste it into Canvas.", true); };
+    var fail = function () {
+      if (legacyCopy()) done();
+      else flash("Couldn’t copy automatically — select the text above and copy it.", false);
+    };
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(done, fail);
+    } else { fail(); }
+  });
+
+  /* ---------- events ---------- */
+
+  form.addEventListener("change", function (e) {
+    var t = e.target;
+    if (t && t.name && t.name.charAt(0) === "q") {
+      var row = t.closest ? t.closest(".item") : null;
+      if (row) row.className = "item";
+    }
+    update();
+    save();
+  });
+
+  [noteEl, nameEl, dateEl].forEach(function (el) {
+    el.addEventListener("input", function () { update(); save(); });
+  });
+
+  document.getElementById("printBtn").addEventListener("click", function () { window.print(); });
+
+  document.getElementById("resetBtn").addEventListener("click", function () {
+    if (!window.confirm("Clear all 30 answers and your written reflection? This cannot be undone.")) return;
+    form.reset();
+    noteEl.value = "";
+    try { localStorage.removeItem(KEY); } catch (e) { /* storage blocked */ }
+    var rows = document.querySelectorAll(".item");
+    for (var i = 0; i < rows.length; i++) { rows[i].className = "item"; }
+    update();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  /* ---------- boot ---------- */
+
+  function start(state) {
+    if (state && state.answers) applyState(state);
+    else restore();
+    if (!dateEl.value) {
+      try {
+        dateEl.value = new Date().toLocaleDateString(undefined,
+          { year: "numeric", month: "long", day: "numeric" });
+      } catch (e) { /* locale unavailable */ }
+    }
+    update();
+  }
+
+  var hot = window.claude && window.claude.hot;
+  if (hot && hot.snapshot) {
+    hot.snapshot(function () {
+      return { answers: readAll(), note: noteEl.value, name: nameEl.value, date: dateEl.value };
+    });
+  }
+  if (hot && hot.ready) hot.ready(start);
+  else start((hot && hot.data) || null);
+})();
+</script>
+</body>
+</html>

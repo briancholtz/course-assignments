@@ -12,6 +12,7 @@ GitHub Pages.
 | Cultural Diversity Awareness Questionnaire | `cultural-awareness/` | https://briancholtz.github.io/course-assignments/cultural-awareness/ |
 | Transformational Leadership Inventory (adapted) | `transformational-leadership/` | https://briancholtz.github.io/course-assignments/transformational-leadership/ |
 | Ethical Leadership Style Questionnaire | `ethical-leadership/` | https://briancholtz.github.io/course-assignments/ethical-leadership/ |
+| Leadership Strengths Questionnaire | `leadership-strengths/` | https://briancholtz.github.io/course-assignments/leadership-strengths/ |
 
 The root `index.html` is the hub page students bookmark. Each assignment lives in
 its own folder as `index.html`, so its URL stays short and stable.
@@ -153,3 +154,34 @@ questionnaire. The page says so in its footer.
 Source: Application 11.3, "Sample Items From the Ethical Leadership Style
 Questionnaire," from *Introduction to Leadership*, ch. 11, "Addressing Ethics in
 Leadership", pp. 313-318.
+
+## Leadership Strengths Questionnaire
+
+30 items rated 1-5 (1 = very much unlike me, 5 = very much like me). Five
+strengths of six items each, **summed** (not averaged), so each ranges 6-30.
+No reverse-scored items and no overall total.
+
+| Strength | Items |
+|---|---|
+| Implementer | 1, 6, 11, 16, 21, 26 |
+| Innovator | 2, 7, 12, 17, 22, 27 |
+| Encourager | 3, 8, 13, 18, 23, 28 |
+| Analyzer | 4, 9, 14, 19, 24, 29 |
+| Mediator | 5, 10, 15, 20, 25, 30 |
+
+The same five ranges apply to every strength:
+
+| Score | Interpretation |
+|---|---|
+| 26-30 | Very high range |
+| 21-25 | High range |
+| 16-20 | Moderate range |
+| 11-15 | Low range |
+| 6-10 | Very low range |
+
+The textbook's stated purpose is to rank the five, so the page shows the profile
+chart in fixed order and a separate list sorted strongest-first, with each
+strength's range label. Ties for the top are reported as ties.
+
+Source: Questionnaire 6.3, "Leadership Strengths Questionnaire," from
+*Introduction to Leadership*, ch. 6, "Engaging Strengths", pp. 150-153.
