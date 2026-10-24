@@ -13,6 +13,7 @@ GitHub Pages.
 | Transformational Leadership Inventory (adapted) | `transformational-leadership/` | https://briancholtz.github.io/course-assignments/transformational-leadership/ |
 | Ethical Leadership Style Questionnaire | `ethical-leadership/` | https://briancholtz.github.io/course-assignments/ethical-leadership/ |
 | Leadership Strengths Questionnaire | `leadership-strengths/` | https://briancholtz.github.io/course-assignments/leadership-strengths/ |
+| Authentic Leadership Self-Assessment | `authentic-leadership/` | https://briancholtz.github.io/course-assignments/authentic-leadership/ |
 
 The root `index.html` is the hub page students bookmark. Each assignment lives in
 its own folder as `index.html`, so its URL stays short and stable.
@@ -185,3 +186,39 @@ strength's range label. Ties for the top are reported as ties.
 
 Source: Questionnaire 6.3, "Leadership Strengths Questionnaire," from
 *Introduction to Leadership*, ch. 6, "Engaging Strengths", pp. 150-153.
+
+## Authentic Leadership Self-Assessment
+
+16 items rated 1-5 (1 = strongly disagree, 5 = strongly agree). Four dimensions
+of four items each, **averaged** (range 1-5). No reverse-scored items.
+
+| Dimension | Items |
+|---|---|
+| Self-Awareness | 1, 5, 9, 13 |
+| Internalized Moral Perspective | 2, 6, 10, 14 |
+| Balanced Processing | 3, 7, 11, 15 |
+| Relational Transparency | 4, 8, 12, 16 |
+
+The page reports the highest and lowest dimension (ties reported as ties), since
+the reflection question asks which area to strengthen. An overall score is shown
+as the average of the four, clearly labelled as a summary rather than a
+separately published score.
+
+**Built from the instructor's spreadsheet; no published copy was supplied.** The
+item-to-dimension mapping was checked against item content and is coherent - each
+item's wording matches its assigned dimension, all 16 are covered, none is
+double-counted. Two things could not be verified and are flagged on the page:
+
+- The spreadsheet **averages** each dimension to a 1-5 score. Published versions
+  of this questionnaire are generally **summed**, giving 4-20 per dimension.
+  Averaging and summing rank the dimensions identically, so the profile is the
+  same either way; only the numbers differ.
+- The interpretation guide ("around 4-5 high, around 3 moderate, around 1-2
+  low") comes from the spreadsheet. Because it says "around", the page prints it
+  as a guide and does not stamp a band label on any dimension.
+
+Terminal periods were added to the item wording for consistency with the other
+pages.
+
+Source: Authentic Leadership Self-Assessment Questionnaire, Peter G. Northouse,
+*Leadership: Theory and Practice*.
