@@ -15,6 +15,7 @@ GitHub Pages.
 | Leadership Strengths Questionnaire | `leadership-strengths/` | https://briancholtz.github.io/course-assignments/leadership-strengths/ |
 | Authentic Leadership Self-Assessment | `authentic-leadership/` | https://briancholtz.github.io/course-assignments/authentic-leadership/ |
 | Emotional Intelligence Scale (WLEIS) | `emotional-intelligence/` | https://briancholtz.github.io/course-assignments/emotional-intelligence/ |
+| Task and Relationship Questionnaire | `task-relationship/` | https://briancholtz.github.io/course-assignments/task-relationship/ |
 
 The root `index.html` is the hub page students bookmark. Each assignment lives in
 its own folder as `index.html`, so its URL stays short and stable.
@@ -264,3 +265,34 @@ emotions") and a terminal period to item 11.
 Source: Wong, C. S., & Law, K. S. (2002). The effects of leader and follower
 emotional intelligence on performance and attitude: An exploratory study.
 *The Leadership Quarterly, 13*(3), 243-274.
+
+## Task and Relationship Questionnaire
+
+20 items rated 1-5 (1 = never, 5 = always). Two scores, each the **sum** of ten
+items, so each ranges 10-50. No reverse-scored items and no overall total.
+
+| Score | Items |
+|---|---|
+| Task | odd-numbered: 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 |
+| Relationship | even-numbered: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 |
+
+The same four ranges apply to each score. Note the published set has four bands,
+not the five the other Northouse questionnaires use, and names the second one
+"moderately high" rather than "moderate":
+
+| Score | Interpretation |
+|---|---|
+| 40-50 | High range |
+| 31-39 | Moderately high range |
+| 21-30 | Low range |
+| 10-20 | Very low range |
+
+The textbook frames the result as a **comparison** between the two scores, so the
+page leads with both side by side and states which is higher and by how many
+points. The textbook gives no cutoff for how close counts as "very similar", so
+the page reports the gap and says no cutoff exists rather than inventing a
+threshold for declaring a profile balanced. An exact tie is reported as equal.
+
+Source: Questionnaire 4.3, "Task and Relationship Questionnaire," from
+*Introduction to Leadership*, ch. 4, "Attending to Tasks and Relationships",
+pp. 92-94.
