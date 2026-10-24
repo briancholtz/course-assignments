@@ -16,6 +16,7 @@ GitHub Pages.
 | Authentic Leadership Self-Assessment | `authentic-leadership/` | https://briancholtz.github.io/course-assignments/authentic-leadership/ |
 | Emotional Intelligence Scale (WLEIS) | `emotional-intelligence/` | https://briancholtz.github.io/course-assignments/emotional-intelligence/ |
 | Task and Relationship Questionnaire | `task-relationship/` | https://briancholtz.github.io/course-assignments/task-relationship/ |
+| Conflict Style Questionnaire | `conflict-style/` | https://briancholtz.github.io/course-assignments/conflict-style/ |
 
 The root `index.html` is the hub page students bookmark. Each assignment lives in
 its own folder as `index.html`, so its URL stays short and stable.
@@ -296,3 +297,53 @@ threshold for declaring a profile balanced. An exact tie is reported as equal.
 Source: Questionnaire 4.3, "Task and Relationship Questionnaire," from
 *Introduction to Leadership*, ch. 4, "Attending to Tasks and Relationships",
 pp. 92-94.
+
+## Conflict Style Questionnaire
+
+The only two-rating instrument in the set. Every one of the 25 items is rated
+**twice** - once for a conflict with Person A and once for a conflict with
+Person B - so students give 50 ratings and each style yields two scores.
+Comparing them is the textbook's stated purpose.
+
+25 items rated 1-5 (1 = never, 5 = always). Five styles of five items each,
+**summed** (range 5-25) per person. No reverse-scored items and no overall total.
+
+| Style | Items |
+|---|---|
+| Avoidance | 1, 6, 11, 16, 21 |
+| Competition | 2, 7, 12, 17, 22 |
+| Compromise | 3, 8, 13, 18, 23 |
+| Accommodation | 4, 9, 14, 19, 24 |
+| Collaboration | 5, 10, 15, 20, 25 |
+
+| Score | Interpretation |
+|---|---|
+| 21-25 | Very strong style |
+| 16-20 | Strong style |
+| 11-15 | Average style |
+| 6-10 | Weak style |
+| 5 | Very weak style |
+
+The textbook prints the bottom range as 0-5. Five items rated 1-5 cannot total
+below 5, so 5 is the only score it can contain; the page shows 5 and says why.
+
+The results name each person's most dominant style, whether the two match, and
+which style shifts most between the relationships. Ties are reported as ties.
+The page carries the textbook's caution that this is **not a personality test
+that labels or categorizes you**, and that scores reflect one particular
+conflict at one time.
+
+### Chart colors
+
+The two series needed a categorical palette, the only chart in the set that
+does. Both modes were checked with the dataviz validator and pass all five
+checks against their own surface: light `#149184` / `#b8801c`, dark `#14a08f` /
+`#b2882a`. A legend is always shown, and every bar carries a direct value label.
+Bars are drawn from 0 rather than from the 5-point floor, so a style at its
+minimum still renders a visible bar instead of nothing.
+
+Source: Questionnaire 10.3, "Conflict Style Questionnaire," from *Introduction
+to Leadership*, ch. 10, "Managing Conflict", pp. 288-290. Adapted there from
+Rahim, M. A., & Magner, N. R. (1995), *Journal of Applied Psychology, 80*(1),
+122-132; in Wilmot, W., & Hocker, J. (2011), *Interpersonal Conflict*,
+pp. 146-148.
