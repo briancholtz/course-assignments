@@ -14,6 +14,7 @@ GitHub Pages.
 | Ethical Leadership Style Questionnaire | `ethical-leadership/` | https://briancholtz.github.io/course-assignments/ethical-leadership/ |
 | Leadership Strengths Questionnaire | `leadership-strengths/` | https://briancholtz.github.io/course-assignments/leadership-strengths/ |
 | Authentic Leadership Self-Assessment | `authentic-leadership/` | https://briancholtz.github.io/course-assignments/authentic-leadership/ |
+| Emotional Intelligence Scale (WLEIS) | `emotional-intelligence/` | https://briancholtz.github.io/course-assignments/emotional-intelligence/ |
 
 The root `index.html` is the hub page students bookmark. Each assignment lives in
 its own folder as `index.html`, so its URL stays short and stable.
@@ -222,3 +223,44 @@ pages.
 
 Source: Authentic Leadership Self-Assessment Questionnaire, Peter G. Northouse,
 *Leadership: Theory and Practice*.
+
+## Emotional Intelligence Scale (WLEIS)
+
+16 items rated 1-5 (1 = strongly disagree, 5 = strongly agree). Four dimensions
+of four items each, **averaged** (range 1-5). **No reverse-scored items.**
+
+| Dimension | Items |
+|---|---|
+| Self-Emotions Appraisal (SEA) | 1, 2, 3, 4 |
+| Others-Emotions Appraisal (OEA) | 5, 6, 7, 8 |
+| Use of Emotion (UOE) | 9, 10, 11, 12 |
+| Regulation of Emotion (ROE) | 13, 14, 15, 16 |
+
+This is the standard WLEIS structure and matches the instructor spreadsheet's
+own dimension formulas, which were used as-is.
+
+### What was not reproduced from the spreadsheet
+
+- **Stray reverse scoring.** A vestigial column applied `LOOKUP(...{5,4,3,2,1})`
+  to items 6 and 12. Both are positively worded ("I am a good observer of
+  others' emotions", "I would always encourage myself to try my best") and the
+  WLEIS has no reverse-scored items. That column fed nothing, so the sheet's
+  own output was unaffected, but it is not carried over here.
+- **Three broken cells** dividing empty cells by 10, and a column of item codes
+  (`N1`, `P3`, `M7`, ...) belonging to some other instrument.
+
+### Flagged, not silently resolved
+
+- The spreadsheet uses a **1-5** response scale. The published WLEIS is
+  generally administered with **seven** points. The page follows the
+  spreadsheet and says so in its footer.
+- The interpretation guide ("around 4-5 high, around 3 moderate, around 1-2
+  low") comes from the spreadsheet. Because it says "around", the page prints it
+  as a guide and stamps no band label on any dimension.
+
+Apostrophes were added to items 5 and 6 ("friends' emotions", "others'
+emotions") and a terminal period to item 11.
+
+Source: Wong, C. S., & Law, K. S. (2002). The effects of leader and follower
+emotional intelligence on performance and attitude: An exploratory study.
+*The Leadership Quarterly, 13*(3), 243-274.
